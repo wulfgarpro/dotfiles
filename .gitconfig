@@ -1,5 +1,17 @@
 [user]
-	name = James Fraser
-	email = wulfgar.pro@gmail.com
+    name = James Fraser
+    email = wulfgar.pro@gmail.com
 [core]
-	editor = vim
+    editor = vim
+[push]
+    default = simple
+[color]
+    ui = true
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    trustExitCode = true
+    cmd = kdiff3
+[diff]
+    tool = kdiff3
+    guitool = kdiff3

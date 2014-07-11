@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/james/site/_layouts'
 let g:netrw_dirhist_2='/home/james/site'
 let g:netrw_dirhist_3='/home/james/site/_layouts'
 let g:netrw_dirhist_4='/home/james/website/css'
 let g:netrw_dirhist_5='/home/james/code/online_count'
+let g:netrw_dirhist_6='/home/james/code/test'

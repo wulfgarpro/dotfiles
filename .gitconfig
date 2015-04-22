@@ -1,6 +1,6 @@
 [user]
-    name = James Fraser
-    email = wulfgar.pro@gmail.com
+	name = Fraser, James
+	email = James.Fraser@dsto.defence.gov.au
 [core]
     editor = vim
 [push]
@@ -15,3 +15,6 @@
 [diff]
     tool = kdiff3
     guitool = kdiff3
+[http]
+	sslverify = false
+	postBuffer = 524288000

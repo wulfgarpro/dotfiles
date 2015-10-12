@@ -59,3 +59,5 @@ export PATH=/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/ligh
 
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
+
+alias vim=gvim

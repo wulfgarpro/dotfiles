@@ -14,3 +14,9 @@ python del powerline_setup
 
 set laststatus=2
 
+" color scheme of the moment:
+syntax on
+colorscheme slate
+
+set gfn=Ubuntu\ Mono\ 12
+

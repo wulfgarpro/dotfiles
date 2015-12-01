@@ -8,9 +8,9 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 set laststatus=2
 
@@ -19,4 +19,6 @@ syntax on
 colorscheme slate
 
 set gfn=Ubuntu\ Mono\ 12
+
+set backspace=indent,eol,start
 

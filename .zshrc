@@ -1,7 +1,9 @@
+export DISPLAY=:0.0
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-source /etc/environment
+#source /etc/environment
 
 DEFAULT_USER="james"
 
@@ -9,8 +11,8 @@ DEFAULT_USER="james"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -46,18 +48,28 @@ setopt share_history
 
 source $ZSH/oh-my-zsh.sh
 
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#fi
 
 # GPG
 #export GPGKEY=D91660BC
 export GPGKEY=550A2F53
 
 # Customize to your needs...
-export PATH=/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=$PATH:/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:"/cygdrive/c/Program Files (x86)/nodejs"
 
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
 
 alias vim=gvim
+
+#oath2 stuff
+export CLIENT_ID="544151842183-eh5c3mn8qe69o09v811onu5gsl192mnh.apps.googleusercontent.com"
+export CLIENT_SECRET="RJq5J9CRBxM6olLO-nIPGExT"
+export CLIENT_CALLBACK_URL="http://localhost:3000/auth/google/callback"
+
+if [[ $(uname -o) == "Cygwin" ]]; then
+    # set up docker env on cygwin
+    alias godocker='cd "c:\\Program Files\\Docker Toolbox" && ./start.sh'
+fi

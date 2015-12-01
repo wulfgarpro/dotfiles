@@ -3,6 +3,7 @@
 	email = James.Fraser@dsto.defence.gov.au
 [core]
     editor = vim
+	autocrlf = true
 [push]
     default = simple
 [color]

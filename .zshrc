@@ -56,8 +56,8 @@ export PATH=$PATH:/home/james/.local/bin:/home/james/.local/:/home/james/Qt5.3.2
 #fi
 
 # GPG
-#export GPGKEY=D91660BC
-export GPGKEY=550A2F53
+export GPGKEY=D91660BC
+#export GPGKEY=550A2F53
 
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"

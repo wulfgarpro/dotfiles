@@ -70,6 +70,6 @@ export CLIENT_SECRET="RJq5J9CRBxM6olLO-nIPGExT"
 export CLIENT_CALLBACK_URL="http://localhost:3000/auth/google/callback"
 
 if [[ $(uname -o) == "Cygwin" ]]; then
-    # set up docker env on cygwin
-    alias godocker='cd "c:\\Program Files\\Docker Toolbox" && ./start.sh'
+    # set up docker env on cygwin - SEE .docker_start.sh for diffs to boot2docker default start.sh client
+    alias godocker='cd "c:\\Program Files\\Docker Toolbox" && ./start.sh && docker-machine ssh default'
 fi

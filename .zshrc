@@ -48,16 +48,16 @@ setopt share_history
 
 source $ZSH/oh-my-zsh.sh
 
-#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#fi
+# Customize to your needs...
+export PATH=/home/james/.local/bin:/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 
 # GPG
 #export GPGKEY=D91660BC
 export GPGKEY=550A2F53
-
-# Customize to your needs...
-export PATH=$PATH:/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:"/cygdrive/c/Program Files (x86)/nodejs"
 
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"

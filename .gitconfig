@@ -3,7 +3,7 @@
     email = wulfgar.pro@gmail.com 
 [core]
     editor = vim
-    autocrlf = true
+	autocrlf = input
 [push]
     default = simple
 [color]

@@ -1,9 +1,9 @@
 [user]
-	name = James Fraser
+    name = James Fraser
     email = wulfgar.pro@gmail.com 
 [core]
     editor = vim
-	autocrlf = true
+    autocrlf = true
 [push]
     default = simple
 [color]
@@ -17,5 +17,5 @@
     tool = kdiff3
     guitool = kdiff3
 [http]
-	sslverify = false
-	postBuffer = 524288000
+    sslverify = false
+    postBuffer = 524288000

@@ -65,3 +65,16 @@ VirtualBox VMs/
 code/
 work/
 .kde
+.bash_profile
+.gem/
+.gitattributes
+.heroku/
+.inputrc
+.minttyrc
+.serverauth.10920
+.serverauth.11048
+.serverauth.7460
+.serverauth.9028
+.zcompdump-James-PC-5.0.7
+.zcompdump-James-PC-5.0.8
+

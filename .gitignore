@@ -79,3 +79,27 @@ work/
 .zcompdump-James-PC-5.0.7
 .zcompdump-James-PC-5.0.8
 
+.Private
+.apport-ignore.xml
+.dbshell
+.eclipse/
+.ecryptfs
+.gimp-2.8/
+.gnome2/
+.googleearth/
+.gtk-recordmydesktop
+.m2/
+.mongorc.js
+.mozilla/
+.mydotvim/bundle/
+.phoronix-test-suite/
+.puppet/
+.rnd
+.rpmdb/
+.selected_editor
+.wireshark/
+.zsnes/
+Qt/
+Steam/
+kmlme/
+workspace/

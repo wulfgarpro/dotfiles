@@ -9,3 +9,6 @@
 [submodule ".mydotvim/bundle/command-t"]
 	path = .mydotvim/bundle/command-t
 	url = git@github.com:wincent/command-t.git
+[submodule ".mydotvim/bundle/vim-fontzoom"]
+	path = .mydotvim/bundle/vim-fontzoom
+	url = git@github.com:thinca/vim-fontzoom.git

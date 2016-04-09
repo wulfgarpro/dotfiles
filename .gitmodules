@@ -6,3 +6,6 @@
 	path = .vim
 	url = https://github.com/tpope/vim-pathogen.git
     ignore = dirty
+[submodule ".mydotvim/bundle/command-t"]
+	path = .mydotvim/bundle/command-t
+	url = git@github.com:wincent/command-t.git

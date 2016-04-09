@@ -21,3 +21,6 @@
 [submodule ".mydotvim/bundle/vim-fugitive"]
 	path = .mydotvim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".mydotvim/bundle/solarized"]
+	path = .mydotvim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

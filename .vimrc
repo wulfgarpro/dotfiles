@@ -15,7 +15,12 @@ set t_Co=256
 
 " color scheme of the moment:
 syntax on
-colorscheme slate
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
 
 set gfn=Ubuntu\ Mono\ 12
 

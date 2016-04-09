@@ -15,3 +15,6 @@
 [submodule ".mydotvim/bundle/vim-sensible"]
 	path = .mydotvim/bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
+[submodule ".mydotvim/bundle/supertab"]
+	path = .mydotvim/bundle/supertab
+	url = git://github.com/vim-scripts/supertab.git

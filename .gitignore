@@ -91,7 +91,7 @@ work/
 .m2/
 .mongorc.js
 .mozilla/
-.mydotvim/bundle/
+.mydotvim/bundle/*
 .phoronix-test-suite/
 .puppet/
 .rnd
@@ -103,3 +103,4 @@ Qt/
 Steam/
 kmlme/
 workspace/
+

@@ -12,3 +12,6 @@
 [submodule ".mydotvim/bundle/vim-fontzoom"]
 	path = .mydotvim/bundle/vim-fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
+[submodule ".mydotvim/bundle/vim-sensible"]
+	path = .mydotvim/bundle/vim-sensible
+	url = git@github.com:tpope/vim-sensible.git

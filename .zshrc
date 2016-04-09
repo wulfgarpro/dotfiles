@@ -1,5 +1,3 @@
-export DISPLAY=:0.0
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -13,28 +11,6 @@ DEFAULT_USER="james"
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -51,10 +27,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/home/james/.local/bin:/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#fi
-
 # GPG
 export GPGKEY=D91660BC
 #export GPGKEY=550A2F53
@@ -63,13 +35,3 @@ export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
 
 alias vim=gvim
-
-#oath2 stuff
-export CLIENT_ID="544151842183-eh5c3mn8qe69o09v811onu5gsl192mnh.apps.googleusercontent.com"
-export CLIENT_SECRET="RJq5J9CRBxM6olLO-nIPGExT"
-export CLIENT_CALLBACK_URL="http://localhost:3000/auth/google/callback"
-
-if [[ $(uname -o) == "Cygwin" ]]; then
-    # set up docker env on cygwin - SEE .docker_start.sh for diffs to boot2docker default start.sh client
-    alias godocker='cd "c:\\Program Files\\Docker Toolbox" && ./start.sh && docker-machine ssh default'
-fi

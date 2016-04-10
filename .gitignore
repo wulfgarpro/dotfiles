@@ -103,3 +103,13 @@ Steam/
 kmlme/
 workspace/
 
+..zshrc.un~
+.babun-docker/
+.babunrc
+.codeintel/
+.pact/
+.winpty/
+.zcompdump-James-PC-5.0.6
+.zshrc~
+bin
+tmp/

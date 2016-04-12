@@ -15,7 +15,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sudo)
+plugins=(git sudo history-sync)
 
 # autocd
 setopt autocd
@@ -28,8 +28,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/home/james/.local/bin:/home/james/.local/:/home/james/Qt5.3.2/5.3/gcc_64/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # GPG
-export GPGKEY=D91660BC
-#export GPGKEY=550A2F53
+#export GPGKEY=D91660BC
+export GPGKEY=550A2F53
 
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"

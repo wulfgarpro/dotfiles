@@ -114,3 +114,4 @@ workspace/
 bin
 tmp/
 .Skype/
+.zsh_history.backup

@@ -26,4 +26,4 @@
 	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule ".zsh_history_proj"]
 	path = .zsh_history_proj
-	url = https://github.com/wulfgarpro/zsh_history
+	url = git@bitbucket.org:wulfgarpro/zsh_history.git

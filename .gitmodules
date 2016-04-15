@@ -24,6 +24,3 @@
 [submodule ".mydotvim/bundle/solarized"]
 	path = .mydotvim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".zsh_history_proj"]
-	path = .zsh_history_proj
-	url = git@bitbucket.org:wulfgarpro/zsh_history.git

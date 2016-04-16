@@ -17,5 +17,5 @@ $ gnome-session-quit
 If you want to add a new plugin to the pathogen path:
 
 $ cd ~<br />
-$ git submodule add -f git@github.com:tpope/vim-sensible.git .mydotvim/bundle/vim-sensible
+$ git submodule add -f git@github.com:tpope/vim-sensible.git .mydotvim/bundle/vim-sensible <br />
 $ git submodule update --init --recursive

@@ -1,6 +1,7 @@
 [user]
     name = James Fraser
     email = wulfgar.pro@gmail.com 
+	signingkey = 76885548
 [core]
     editor = vim
 	autocrlf = input

@@ -116,3 +116,5 @@ tmp/
 .Skype/
 .zsh_history.backup
 .zsh_history_proj/
+.zcompdump-ubuntork-5.0.2
+mykey.asc

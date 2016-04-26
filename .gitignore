@@ -118,3 +118,9 @@ tmp/
 .zsh_history_proj/
 .zcompdump-ubuntork-5.0.2
 mykey.asc
+.dropbox-dist/
+.dropbox/
+Dropbox/
+Notebooks
+.asciinema/
+.keepass

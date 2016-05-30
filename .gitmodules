@@ -24,3 +24,6 @@
 [submodule ".mydotvim/bundle/solarized"]
 	path = .mydotvim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".mydotvim/bundle/ctrlp.vim"]
+	path = .mydotvim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git

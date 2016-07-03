@@ -35,3 +35,4 @@ export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
 
 alias vim=gvim
+alias gcp=gcp

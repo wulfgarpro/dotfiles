@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/james/code/mit/assignment_3/point_array'
+let g:netrw_dirhist_2='/home/james/code/mit/assignment_3/point'
+let g:netrw_dirhist_3='/home/james/code/mit/assignment_3/point_array'
+let g:netrw_dirhist_4='/home/james'
+let g:netrw_dirhist_5='/home/james/code'
+let g:netrw_dirhist_6='/home/james/code/cmake'
+let g:netrw_dirhist_7='/home/james/code/cmake/src'
+let g:netrw_dirhist_8='/home/james/code/cmake/src/math_functions'

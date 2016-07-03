@@ -128,3 +128,5 @@ QT/
 bak/
 .packettracer
 pt/
+.gcp/
+.cpan

@@ -130,3 +130,4 @@ bak/
 pt/
 .gcp/
 .cpan
+.cmake/

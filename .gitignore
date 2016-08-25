@@ -131,3 +131,11 @@ pt/
 .gcp/
 .cpan
 .cmake/
+.p2/
+eclipse/
+.psensor/
+.tooling/
+.swt
+.java
+.oracle_jre_usage
+.mydotvim/.netrwhist

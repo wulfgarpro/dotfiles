@@ -20,9 +20,11 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-colorscheme solarized
+colorscheme slate
 
 set gfn=Ubuntu\ Mono\ 12
 
 set backspace=indent,eol,start
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %

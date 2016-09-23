@@ -139,3 +139,10 @@ eclipse/
 .java
 .oracle_jre_usage
 .mydotvim/.netrwhist
+.bundle/
+.gate.session
+.gate.xml
+.gate/
+.rvm/
+GATE_Developer_8.2/
+

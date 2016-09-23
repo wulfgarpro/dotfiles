@@ -39,3 +39,5 @@ alias gcp=gcp
 alias df=dfc
 alias top=htop
 alias cp=gcp
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

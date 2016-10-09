@@ -147,3 +147,8 @@ eclipse/
 GATE_Developer_8.2/
 
 .msf4/
+.pgadmin
+.pgadmin3
+.pgadmin_histoqueries
+.pgpass
+pgadmin.log

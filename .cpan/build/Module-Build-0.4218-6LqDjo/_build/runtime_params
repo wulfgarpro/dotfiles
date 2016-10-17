@@ -1,4 +1,0 @@
-do{ my $x = {
-       'installdirs' => 'site'
-     };
-$x; }

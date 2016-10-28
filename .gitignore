@@ -152,3 +152,5 @@ GATE_Developer_8.2/
 .pgadmin_histoqueries
 .pgpass
 pgadmin.log
+.compiz/
+.zcompdump-wulfgar-lt-5.2

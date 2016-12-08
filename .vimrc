@@ -15,7 +15,7 @@ set t_Co=256
 " color scheme of the moment:
 syntax on
 colorscheme onehalfdark
-let g:airline_theme='onehalflight'
+" let g:airline_theme='onehalflight'
 
 set gfn=Ubuntu\ Mono\ 12
 

@@ -2,35 +2,34 @@
 	path = .oh-my-zsh
     url = git@github.com:robbyrussell/oh-my-zsh.git
     ignore = dirty
-[submodule ".vim-patheogen"]
-	path = .vim-patheogen
+[submodule ".vim/bundle/vim-patheogen"]
+	path = .vim/bundle/vim-patheogen
 	url = git@github.com:tpope/vim-pathogen.git
-    ignore = dirty
-[submodule ".vim-patheogen/bundle/command-t"]
-	path = .vim-patheogen/bundle/command-t
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
 	url = git@github.com:wincent/command-t.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/vim-fontzoom"]
-	path = .vim-patheogen/bundle/vim-fontzoom
+[submodule ".vim/bundle/vim-fontzoom"]
+	path = .vim/bundle/vim-fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/vim-sensible"]
-	path = .vim-patheogen/bundle/vim-sensible
+[submodule ".vim/bundle/vim-sensible"]
+	path = .vim/bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/supertab"]
-	path = .vim-patheogen/bundle/supertab
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
 	url = git@github.com:vim-scripts/supertab.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/vim-fugitive"]
-	path = .vim-patheogen/bundle/vim-fugitive
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/solarized"]
-	path = .vim-patheogen/bundle/solarized
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
     ignore = dirty
-[submodule ".vim-patheogen/bundle/ctrlp.vim"]
-	path = .vim-patheogen/bundle/ctrlp.vim
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
     ignore = dirty

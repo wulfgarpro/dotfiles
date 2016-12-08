@@ -12,15 +12,10 @@ set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-
 " color scheme of the moment:
 syntax on
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme slate
+colorscheme onehalfdark
+let g:airline_theme='onehalflight'
 
 set gfn=Ubuntu\ Mono\ 12
 

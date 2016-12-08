@@ -1,30 +1,36 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-    url = https://github.com/robbyrussell/oh-my-zsh.git
+    url = git@github.com:robbyrussell/oh-my-zsh.git
     ignore = dirty
-[submodule ".vim"]
-	path = .vim
-	url = https://github.com/tpope/vim-pathogen.git
+[submodule ".vim-patheogen"]
+	path = .vim-patheogen
+	url = git@github.com:tpope/vim-pathogen.git
     ignore = dirty
-[submodule ".mydotvim/bundle/command-t"]
-	path = .mydotvim/bundle/command-t
+[submodule ".vim-patheogen/bundle/command-t"]
+	path = .vim-patheogen/bundle/command-t
 	url = git@github.com:wincent/command-t.git
     ignore = dirty
-[submodule ".mydotvim/bundle/vim-fontzoom"]
-	path = .mydotvim/bundle/vim-fontzoom
+[submodule ".vim-patheogen/bundle/vim-fontzoom"]
+	path = .vim-patheogen/bundle/vim-fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
-[submodule ".mydotvim/bundle/vim-sensible"]
-	path = .mydotvim/bundle/vim-sensible
+    ignore = dirty
+[submodule ".vim-patheogen/bundle/vim-sensible"]
+	path = .vim-patheogen/bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
-[submodule ".mydotvim/bundle/supertab"]
-	path = .mydotvim/bundle/supertab
-	url = git://github.com/vim-scripts/supertab.git
-[submodule ".mydotvim/bundle/vim-fugitive"]
-	path = .mydotvim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-[submodule ".mydotvim/bundle/solarized"]
-	path = .mydotvim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".mydotvim/bundle/ctrlp.vim"]
-	path = .mydotvim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
+    ignore = dirty
+[submodule ".vim-patheogen/bundle/supertab"]
+	path = .vim-patheogen/bundle/supertab
+	url = git@github.com:vim-scripts/supertab.git
+    ignore = dirty
+[submodule ".vim-patheogen/bundle/vim-fugitive"]
+	path = .vim-patheogen/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+    ignore = dirty
+[submodule ".vim-patheogen/bundle/solarized"]
+	path = .vim-patheogen/bundle/solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+    ignore = dirty
+[submodule ".vim-patheogen/bundle/ctrlp.vim"]
+	path = .vim-patheogen/bundle/ctrlp.vim
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+    ignore = dirty

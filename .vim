@@ -1,1 +1,1 @@
-.mydotvim
+.vim-patheogen

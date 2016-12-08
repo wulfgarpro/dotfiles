@@ -4,7 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-call pathogen#infect()
+execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -13,7 +13,7 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 " color scheme of the moment:
-syntax on
+set background=dark
 colorscheme onehalfdark
 " let g:airline_theme='onehalflight'
 

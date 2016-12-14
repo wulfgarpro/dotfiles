@@ -8,31 +8,27 @@
 [submodule ".vim/bundle/command-t"]
 	path = .vim/bundle/command-t
 	url = git@github.com:wincent/command-t.git
-    ignore = dirty
 [submodule ".vim/bundle/vim-fontzoom"]
 	path = .vim/bundle/vim-fontzoom
 	url = git@github.com:thinca/vim-fontzoom.git
-    ignore = dirty
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
-    ignore = dirty
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = git@github.com:vim-scripts/supertab.git
-    ignore = dirty
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-    ignore = dirty
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
-    ignore = dirty
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
-    ignore = dirty
 [submodule ".vim/bundle/onehalf"]
 	path = .vim/bundle/onehalf
 	url = git@github.com:sonph/onehalf.git
+[submodule ".vim/bundle/vim-gradle"]
+	path = .vim/bundle/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git

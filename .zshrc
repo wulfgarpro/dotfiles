@@ -35,7 +35,7 @@ export GPGKEY=550A2F53
 export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
 
-alias vim=gvim
+#alias vim=gvim
 alias gcp=gcp
 alias df=dfc
 alias top=htop

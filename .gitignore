@@ -131,3 +131,4 @@ workspace/
 .zsh_history.backup
 .zsh_history_proj/
 .zsnes/
+tags

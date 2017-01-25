@@ -59,7 +59,7 @@ let g:easytags_suppress_ctags_warning = 1
 " Open/close tagbar with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
+autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display hunks if the diff is non-zero

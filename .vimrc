@@ -52,7 +52,7 @@ set tags=./tags;,~/.vimtags
 " Sensible defaults
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
+let g:easytags_dynamic_files = 2 
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
@@ -69,11 +69,11 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " ----- Raimondi/delimitMate settings -----
 let delimitMate_expand_cr = 1
 augroup mydelimitMate
-  au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-  au FileType tex let b:delimitMate_quotes = ""
-  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
+    au!
+    au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+    au FileType tex let b:delimitMate_quotes = ""
+    au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+    au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.

@@ -36,10 +36,10 @@ export DEBFULLNAME="James Fraser"
 export DEBEMAIL="wulfgar.pro@gmail.com"
 
 #alias vim=gvim
-alias gcp=gcp
+#alias gcp=gcp
 alias df=dfc
 alias top=htop
-alias cp=gcp
+#alias cp=gcp
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 

@@ -1,7 +1,7 @@
 set nocompatible
 set number
-"set tabstop=4
-"set shiftwidth=4
+set tabstop=4
+set shiftwidth=4
 "set expandtab
 set gfn=Ubuntu\ Mono\ 12
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'backspace'

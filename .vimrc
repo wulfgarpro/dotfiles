@@ -1,8 +1,8 @@
 set nocompatible
 set number
-set tabstop=4
-set shiftwidth=4
-set expandtab
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
 set gfn=Ubuntu\ Mono\ 12
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'backspace'
 set backspace=indent,eol,start
@@ -60,7 +60,7 @@ let g:easytags_suppress_ctags_warning = 1
 " Open/close tagbar with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
-autocmd BufEnter * nested :call tagbar#autoopen(0)
+"autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display hunks if the diff is non-zero

@@ -1,6 +1,6 @@
 set nocompatible
 set number
-set tabstop=4
+"set tabstop=4
 set shiftwidth=4
 "set expandtab
 set gfn=Ubuntu\ Mono\ 12
@@ -16,7 +16,7 @@ set t_Co=256
 " color scheme of the moment:
 set background=dark
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'mouse'
-set mouse=a
+set mouse="vi"
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
 hi clear SignColumn
@@ -35,7 +35,7 @@ colorscheme onehalfdark
 " nmap is map key to normal mode, not vis, insert, etc.
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 1
+"let g:nerdtree_tabs_open_on_console_startup = 1
 
 "scrooloose/syntastic settings
 set statusline+=%#warningmsg#

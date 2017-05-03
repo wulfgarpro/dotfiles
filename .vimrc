@@ -1,8 +1,10 @@
-set nocompatible
+set nocompatible "disable vi compatability
 set number
-"set tabstop=4
+set tabstop=4
 set shiftwidth=4
-"set expandtab
+set softtabstop=4
+set noexpandtab "tabs are tabs, not spaces
+
 set gfn=Ubuntu\ Mono\ 12
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'backspace'
 set backspace=indent,eol,start

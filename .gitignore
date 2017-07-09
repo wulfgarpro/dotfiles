@@ -136,3 +136,6 @@ Calibre Library/
 .qgis/
 .nvm/
 R/
+.fltk/
+.texlive2016/
+.xdvirc

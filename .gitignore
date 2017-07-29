@@ -139,3 +139,9 @@ R/
 .fltk/
 .texlive2016/
 .xdvirc
+.IntelliJIdea2017.1/
+.IntelliJIdea2017.2/
+.docker/
+.npmrc
+.v8flags.5.1.281.102.b4cc344d25a2efe540adbf2678e2304c.json
+.yo-rc-global.json

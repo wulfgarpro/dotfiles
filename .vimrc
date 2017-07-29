@@ -19,6 +19,7 @@ set t_Co=256
 set background=dark
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'mouse'
 set mouse="vi"
+set pastetoggle=<f3>
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
 hi clear SignColumn

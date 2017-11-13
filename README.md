@@ -14,9 +14,12 @@ chsh -s /bin/zsh
 gnome-session-quit
 ```
 
-## See for more information
-https://github.com/robbyrussell/oh-my-zsh
-https://github.com/VundleVim/Vundle.vim
-https://github.com/sonph/onehalf
-https://github.com/itchyny/lightline.vim
-https://github.com/powerline/fonts
+## Thanks for the fish: 
+* https://github.com/robbyrussell/oh-my-zsh
+* https://github.com/VundleVim/Vundle.vim
+* https://github.com/sonph/onehalf
+* https://github.com/itchyny/lightline.vim
+* https://github.com/powerline/fonts
+
+## License
+MIT © [James Fraser](https://www.wulfgar.pro)

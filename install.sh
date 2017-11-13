@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 echo "Installing system dependencies..."
-sudo apt install git vim vim-gtk3 fontconfig zsh
+sudo apt install git vim vim-gtk3 fontconfig zsh python3.5 python3-pip
+python3.5 -m pip install --user virtualenvwrapper 
 
 echo "Installing Powerline patched fonts..."
 cd .fonts && ./install.sh

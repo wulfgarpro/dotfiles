@@ -1,70 +1,19 @@
 [submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+    path = .oh-my-zsh
     url = git@github.com:robbyrussell/oh-my-zsh.git
     ignore = dirty
-[submodule ".vim/bundle/vim-patheogen"]
-	path = .vim/bundle/vim-patheogen
-	url = git@github.com:tpope/vim-pathogen.git
-[submodule ".vim/bundle/command-t"]
-	path = .vim/bundle/command-t
-	url = git@github.com:wincent/command-t.git
 [submodule ".vim/bundle/vim-fontzoom"]
-	path = .vim/bundle/vim-fontzoom
-	url = git@github.com:thinca/vim-fontzoom.git
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
-	url = git@github.com:tpope/vim-sensible.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-    url = git@github.com:ervandew/supertab.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-[submodule ".vim/bundle/solarized"]
-	path = .vim/bundle/solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
+    path = .vim/bundle/vim-fontzoom
+    url = git@github.com:thinca/vim-fontzoom.git
 [submodule ".vim/bundle/onehalf"]
-	path = .vim/bundle/onehalf
-	url = git@github.com:sonph/onehalf.git
-[submodule ".vim/bundle/vim-gradle"]
-	path = .vim/bundle/vim-gradle
-	url = https://github.com/tfnico/vim-gradle.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule ".vim/bundle/vim-nerdtree-tabs"]
-	path = .vim/bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
-[submodule ".vim/bundle/vim-easytags"]
-	path = .vim/bundle/vim-easytags
-	url = https://github.com/xolox/vim-easytags
-[submodule ".vim/bundle/vim-misc"]
-	path = .vim/bundle/vim-misc
-	url = https://github.com/xolox/vim-misc
-[submodule ".vim/bundle/a.vim"]
-	path = .vim/bundle/a.vim
-	url = https://github.com/vim-scripts/a.vim
-[submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/bundle/delimitMate"]
-	path = .vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate
-[submodule ".vim/bundle/nerdtree-git-plugin"]
-	path = .vim/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule ".vim/bundle/vim-bufferline"]
-	path = .vim/bundle/vim-bufferline
-	url = https://github.com/bling/vim-bufferline
+    path = .vim/bundle/onehalf
+    url = git@github.com:sonph/onehalf.git
+[submodule ".vim/bundle/Vundle.vim.git"]
+    path = .vim/bundle/Vundle.vim.git
+    url = git@github.com:VundleVim/Vundle.vim.git
+[submodule ".vim/bundle/lightline.vim"]
+    path = .vim/bundle/lightline.vim
+    url = git@github.com:itchyny/lightline.vim.git
+[submodule ".fonts"]
+    path = .fonts
+    url = git@github.com:powerline/fonts.git

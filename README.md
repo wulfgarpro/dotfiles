@@ -1,21 +1,22 @@
 # dotfiles
+> This is my dotfile repo. I check this out at my $HOME across my machines.
 
-This is my dotfile repo. I check this out at my $HOME across my machines.
+## Setup
 
-I use Linux, but this should work for OSX.
+```bash
+git clone git://github.com/wulfgarpro/dotfiles.git
+cd dotfiles
+git submodule update --init --recursive
+cd dotfiles
+./install.sh
+cd ../ && rm -rf dotfiles
+chsh -s /bin/zsh
+gnome-session-quit
+```
 
-### Setup
-
-$ cd ~<br />
-$ git clone git://github.com/wulfgarpro/dotfiles.git .<br />
-$ git submodule update --init --recursive<br /> 
-$ chsh -s /bin/zsh<br />
-$ gnome-session-quit
-
-### Adding more...
-
-If you want to add a new plugin to the pathogen path:
-
-$ cd ~<br />
-$ git submodule add -f git@github.com:tpope/vim-sensible.git .mydotvim/bundle/vim-sensible <br />
-$ git submodule update --init --recursive
+## See for more information
+https://github.com/robbyrussell/oh-my-zsh
+https://github.com/VundleVim/Vundle.vim
+https://github.com/sonph/onehalf
+https://github.com/itchyny/lightline.vim
+https://github.com/powerline/fonts

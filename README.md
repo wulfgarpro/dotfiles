@@ -14,7 +14,8 @@ chsh -s /bin/zsh
 gnome-session-quit
 ```
 
-## Thanks for the fish: 
+## Thanks to
+
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/VundleVim/Vundle.vim
 * https://github.com/sonph/onehalf
@@ -22,4 +23,5 @@ gnome-session-quit
 * https://github.com/powerline/fonts
 
 ## License
+
 MIT © [James Fraser](https://www.wulfgar.pro)

@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Assume Ubuntu + Gnome-terminal as default system
+# Suport for WSL coming soon.
+
 echo "Installing system dependencies..."
 sudo apt install git vim vim-gtk3 fontconfig zsh python3.5 python3-pip
 python3.5 -m pip install --user virtualenvwrapper 

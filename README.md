@@ -7,7 +7,6 @@
 git clone git://github.com/wulfgarpro/dotfiles.git
 cd dotfiles
 git submodule update --init --recursive
-cd dotfiles
 ./install.sh
 cd ../ && rm -rf dotfiles
 chsh -s /bin/zsh

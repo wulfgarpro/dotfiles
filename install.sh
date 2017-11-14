@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 echo "Installing system dependencies..."
 sudo apt install git vim vim-gtk3 fontconfig zsh python3.5 python3-pip

@@ -4,7 +4,7 @@
 # Suport for WSL coming soon.
 
 echo "Installing system dependencies..."
-sudo apt install git vim vim-gtk3 fontconfig zsh python3.5 python3-pip
+sudo apt install git vim vim-gtk3 fontconfig zsh python3.5 python3-pip dconftools
 python3.5 -m pip install --user virtualenvwrapper 
 
 echo "Installing Powerline patched fonts..."

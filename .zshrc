@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/home/james/.nvm/versions/node/v8.1.0/lib/node_modules:/home/james/.nvm/versions/node/v8.1.4/lib/node_modules
 
 # Python
-alias python=python3.5
+alias python=python3.6
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
 export VIRTUALENVWRAPPER_PYTHON="$(which python3.5)"

@@ -144,3 +144,12 @@ code/
 eclipse/
 tags
 workspace/
+.pylint.d/
+.dynamorio/
+.vagrant.d/
+.vagrant/
+.vscode/
+.zcompdump-wulfgar-lt-5.4.2
+new_seed_wallet
+nltk_data/
+snap/

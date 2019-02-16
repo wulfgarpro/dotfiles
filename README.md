@@ -6,11 +6,7 @@
 ```bash
 git clone git://github.com/wulfgarpro/dotfiles.git
 cd dotfiles
-git submodule update --init --recursive
-./install.sh
-cd ../ && rm -rf dotfiles
-chsh -s /bin/zsh
-gnome-session-quit
+./install.sh [--help, --wsl]
 ```
 
 ## Thanks to

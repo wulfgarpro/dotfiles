@@ -31,7 +31,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 silent! colorscheme onehalfdark
-set termguicolors
+silent! set termguicolors
 set t_Co=256
 set cursorline
 set laststatus=2

@@ -5,8 +5,8 @@ ZSH_THEME="steeef"
 plugins=(git colorize sudo history-sync zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
-alias df=dfc
-alias top=htop
+alias df='dfc'
+alias top='htop'
 alias add='ga'
 alias fetch='gf'
 alias commit='gc'

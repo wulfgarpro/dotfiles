@@ -6,15 +6,14 @@ set rtp+=~/.vim/bundle/Vundle.vim.git
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
-Bundle 'sonph/onehalf', {'rtp': 'vim/'}
-let g:lightline = { 'colorscheme': 'onehalfdark' }
-
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'itchyny/lightline.vim'
-
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,8 +29,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+silent! let g:lightline = { 'colorscheme': 'onehalfdark' }
 silent! colorscheme onehalfdark
-set termguicolors
+silent! set termguicolors
 set t_Co=256
 set cursorline
 set laststatus=2

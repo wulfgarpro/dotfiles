@@ -18,26 +18,29 @@ deps="vim vim-gtk3 fontconfig zsh python3 python3-pip"
 if [ "$1" == "--wsl" ]; then
     sudo apt-get install $deps
 else
-    sudo apt-get install $deps dconftools gconf2
+    sudo apt-get install $deps #dconftools gconf2
 
     echo "++ Installing Powerline patched fonts..."
-    cd .fonts && ./install.sh
+    ./.fonts/install.sh
 
     echo "++ Installing onehalfdark theme for gnome-terminal..."
-    source .onehalf-gnome-terminal-setup/onehalfdark.sh
+    # Permission issue?
+    chmod +x ./.onehalf-gnome-terminal-setup/onehalfdark.sh
+    ./.onehalf-gnome-terminal-setup/onehalfdark.sh
 fi
 
 python3 -m pip install pip --upgrade
 python3 -m pip install --user virtualenvwrapper 
 
+echo "++ Configuring environment..."
+declare -a resources=(".gvimrc" ".oh-my-zsh" ".vim" ".vimrc" ".zshrc")
+#cp -fr $resources $HOME
+for i in "${resources[@]}"
+do
+    ln -fv -s $PWD/$i $HOME/$i 
+done
+
 echo "++ Installing vim plugins with Vundle..."
 vim +PluginInstall +qall
 
-echo "++ Configuring environment..."
-resources=".gvimrc .oh-my-zsh .vim .vimrc .zshrc"
-if [ "$1" == "--wsl" ]; then
-    cp -fr $resources $HOME
-else
-    cp -fr $resources fonts $HOME
-fi
-/bin/zsh
+#/bin/zsh

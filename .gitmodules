@@ -2,18 +2,9 @@
     path = .oh-my-zsh
     url = git@github.com:robbyrussell/oh-my-zsh.git
     ignore = dirty
-[submodule ".vim/bundle/vim-fontzoom"]
-    path = .vim/bundle/vim-fontzoom
-    url = git@github.com:thinca/vim-fontzoom.git
-[submodule ".vim/bundle/onehalf"]
-    path = .vim/bundle/onehalf
-    url = git@github.com:sonph/onehalf.git
 [submodule ".vim/bundle/Vundle.vim.git"]
     path = .vim/bundle/Vundle.vim.git
     url = git@github.com:VundleVim/Vundle.vim.git
-[submodule ".vim/bundle/lightline.vim"]
-    path = .vim/bundle/lightline.vim
-    url = git@github.com:itchyny/lightline.vim.git
 [submodule ".fonts"]
     path = .fonts
     url = git@github.com:powerline/fonts.git

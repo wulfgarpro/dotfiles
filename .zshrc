@@ -14,6 +14,7 @@ alias status='gst'
 alias diff='gd'
 alias push='gp'
 alias pull='gl'
+alias checkout="gco"
 
 setopt autocd
 setopt share_history

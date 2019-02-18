@@ -152,4 +152,5 @@ workspace/
 .zcompdump-wulfgar-lt-5.4.2
 new_seed_wallet
 nltk_data/
+.vim/bundle
 snap/

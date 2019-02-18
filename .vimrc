@@ -9,7 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'tpope/vim-surround'
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 let g:lightline = { 'colorscheme': 'onehalfdark' }
 
@@ -30,9 +30,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+silent! colorscheme onehalfdark
 set termguicolors
 set t_Co=256
-colorscheme onehalfdark
 set cursorline
 set laststatus=2
 set number

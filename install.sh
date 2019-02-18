@@ -20,9 +20,9 @@ echo "++ Installing system dependencies ++"
 echo "###########################################"
 deps="vim vim-gtk3 fontconfig zsh python3 python3-pip"
 if [ "$1" == "--wsl" ]; then
-    sudo apt-get install $deps
+    sudo apt-get install "$deps"
 else
-    sudo apt-get install $deps #dconftools gconf2
+    sudo apt-get install "$deps" #dconftools gconf2
 fi
 
 echo "###########################################"
@@ -37,7 +37,8 @@ echo "###########################################"
 declare -a resources=(".gvimrc" ".oh-my-zsh" ".vimrc" ".zshrc" ".vim")
 for i in "${resources[@]}"
 do
-    ln -fv -ns $PWD/$i $HOME/$i 
+    mv "$HOME"/"$i" "$HOME"/"${i}"_backup_"$(date +%H%M%S)"
+    ln -fv -ns "$PWD"/"$i" "$HOME"/"$i" 
 done
 
 echo "###########################################"
@@ -50,14 +51,14 @@ if [ "$1" != "--wsl" ]; then
     echo "###########################################"
     echo "++ Installing Powerline patched fonts ++"
     echo "###########################################"
-    $PWD/.fonts/install.sh
+    "$PWD"/.fonts/install.sh
 
     echo "###########################################"
     echo "++ Installing theme for gnome-terminal ++"
     echo "###########################################"
     # Permission issue?
-    chmod +x ./.onehalf-gnome-terminal-setup/onehalfdark.sh
-    $PWD/.onehalf-gnome-terminal-setup/onehalfdark.sh
+    chmod +x "$PWD"/.onehalf-gnome-terminal-setup/onehalfdark.sh
+    "$PWD"/.onehalf-gnome-terminal-setup/onehalfdark.sh
 fi
 
 echo "##########################"

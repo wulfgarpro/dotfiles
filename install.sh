@@ -56,7 +56,7 @@ if [ "$1" != "--wsl" ]; then
     echo "++ Installing theme for gnome-terminal ++"
     echo "###########################################"
     # Permission issue?
-    chmod +x ./.onehalf-gnome-terminal-setup/onehalfdark.sh
+    chmod +x $PWD/.onehalf-gnome-terminal-setup/onehalfdark.sh
     $PWD/.onehalf-gnome-terminal-setup/onehalfdark.sh
 fi
 

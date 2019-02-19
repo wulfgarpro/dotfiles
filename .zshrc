@@ -15,6 +15,7 @@ alias diff='gd'
 alias push='gp'
 alias pull='gl'
 alias checkout="gco"
+alias clean="git clean"
 
 setopt autocd
 setopt share_history

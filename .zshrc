@@ -16,6 +16,7 @@ alias push='gp'
 alias pull='gl'
 alias checkout="gco"
 alias clean="git clean"
+alias stash="git stash"
 
 setopt autocd
 setopt share_history

@@ -898,3 +898,10 @@ shell:
     - -l
     - -c
     - "tmux new"
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 500
+

@@ -111,9 +111,4 @@ alias ccl="cargo check-lints"
 alias crb="cargo run-build"
 
 ## System
-### Pacman
-alias orphans="sudo pacman -Qtdq"
-alias cleanorphans="pacman -R $(pacman -Qtdq)"
-alias cleancache="sudo pacman -Sc"
-alias purgecache="sudo pacman -Scc"
-alias upgrade="sudo pacman -Syu"
+alias cat="bat"

@@ -1,0 +1,5 @@
+[user]
+	email = wulfgar.pro@gmail.com
+	name = James Fraser
+[core]
+	editor = nvim

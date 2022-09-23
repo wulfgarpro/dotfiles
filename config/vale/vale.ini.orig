@@ -1,0 +1,10 @@
+StylesPath = styles
+MinAlertLevel = suggestion
+
+<<<<<<< HEAD
+[*.{cpp,h,in,md,rst,txt,yaml}]
+=======
+[*.{cpp,h,md,rst,txt,yaml}]
+>>>>>>> 3c189d822b915d6a369acaee2cafe418028dd76e
+BasedOnStyles = Google
+# alex, Joblint, Microsoft, proseline, Readability, Vale, write-good

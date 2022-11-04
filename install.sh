@@ -35,7 +35,7 @@ sudo pacman -Sq --noconfirm --needed \
 sudo pacman -Sqcc --noconfirm
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si`.
-sudo paru -Syuq --noconfirm
+paru -Syuq --noconfirm
 paru -Sq --noconfirm --needed \
     vale-bin
 paru -Sqcc --noconfirm

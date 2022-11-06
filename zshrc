@@ -50,7 +50,6 @@ alias sudo="sudo " # Space allows `sudo` aliases
 
 # Tools
 alias smbmap="smbmap.py"
-alias vale="vale --config $HOME/.config/vale/vale.ini"
 
 #-Variables
 LOCAL_BIN=$HOME/.local/bin

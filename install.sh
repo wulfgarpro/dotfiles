@@ -22,6 +22,8 @@ sudo pacman -Sq --noconfirm --needed \
     git \
     git-lfs \
     go \
+    gnome-shell-extension-appindicator \
+    gnome-shell-extension-bing-wallpaper \
     meld \
     neovim \
     nodejs \

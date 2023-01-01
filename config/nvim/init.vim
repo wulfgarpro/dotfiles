@@ -63,8 +63,15 @@ END
 
 "-Vim Wiki
 "
+" Use `\ww` to open default wiki and `\ws` to select a wiki.
+"
+" In order, the wikis in the list are:
+"   * https://github.com/wulfgarpro/wiki
+"   * https://github.com/wulfgarpro/rust_by_example/wiki
 let g:vimwiki_list = [
-    \ {'path': '~/code/wiki', 'syntax': 'markdown', 'ext': 'md'}]
+    \ {'path': '~/code/wiki', 'syntax': 'markdown', 'ext': 'md'},
+    \ {'path': '~/code/rust_by_example/wiki', 'syntax': 'markdown', 'ext': 'md'}
+\]
 " Don't open markdown files outside of wiki as temporary wiki. This prevents
 " markdown files outside of the wiki on `vimwiki_list` from being detected as
 " filetype `vimwiki`.

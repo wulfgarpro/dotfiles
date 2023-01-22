@@ -22,23 +22,33 @@ sudo pacman -Sq --noconfirm --needed \
     git \
     git-lfs \
     go \
-    gnome-shell-extension-appindicator \
-    gnome-shell-extension-bing-wallpaper \
     meld \
     neovim \
     nodejs \
+    pipewire-pulse \
     pyenv \
     python-pynvim \
     ripgrep \
     ruby \
+    rustup \
+    sway \
+    swaybg \
+    swayidle
+    swaylock \
     tmux \
     tree \
-    xplr
+    ttf-ubuntu-font-family \
+    waybar \
+    wofi \
+    xplr \
+    xorg-xwayland
+
 sudo pacman -Sqcc --noconfirm
 # If `paru` is not installed, install from AUR:
-# `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`.
+# `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
 paru -Syuq --noconfirm
 paru -Sq --noconfirm --needed \
+    swaync \
     vale-bin
 paru -Sqcc --noconfirm
 git submodule update --init
@@ -48,9 +58,12 @@ echo "++ Configuring environment ++"
 echo "############################################"
 declare -a resources=(
     "config/alacritty"
+    "config/fontconfig"
     "config/nvim"
+    "config/sway"
     "config/tmux"
     "config/vale"
+    "config/waybar"
     "config/zsh"
     "gitconfig"
     "p10k.zsh"
@@ -58,7 +71,7 @@ declare -a resources=(
 )
 for i in "${resources[@]}"
 do
-    # This is a destructive operation.
+    # The below is a destructive operation!
     ln -fv -ns "$PWD/$i" "$HOME/.$i"
 done
 
@@ -81,7 +94,7 @@ echo "nvim '+TSInstallSync! ...' +qall"
 nvim '+TSInstallSync! bash c cpp markdown python rust' +qall
 
 echo "############################################"
-echo "++ Installing fonts ++"
+echo "++ Installing JetBrainsMono font ++"
 echo "############################################"
 wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Medium/complete/JetBrains%20Mono%20Medium%20Nerd%20Font%20Complete.ttf -P "$HOME/.local/share/fonts/JetBrains && fc-cache -vf"
 

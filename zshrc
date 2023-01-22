@@ -48,7 +48,7 @@ alias cat="bat -p" # `-p` is plain
 alias n="nvim"
 alias sudo="sudo " # Space allows `sudo` aliases
 
-# Tools
+## Tools
 alias smbmap="smbmap.py"
 
 #-Variables
@@ -64,6 +64,11 @@ export PATH=$LOCAL_BIN:$CARGO_BIN:$GEM_BIN:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+## Enable wayland display protocol for Firefox if running wayland
+if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+    export MOD_ENABLE_WAYLAND=1
+fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#-Theme (cont.)
+# Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

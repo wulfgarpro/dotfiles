@@ -44,8 +44,8 @@ alias cnt="cargo nextest run" # `cargo install cargo-nextest`
 alias cw="cargo watch -x" # `cargo install cargo-watch`
 
 ## System
-alias cat="bat -p" # `-p` is plain
 alias n="nvim"
+alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 
 ## Tools
@@ -54,12 +54,10 @@ alias smbmap="smbmap.py"
 #-Variables
 LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin
-GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-GEM_BIN=$GEM_HOME/bin
 
 #-Environment
 export LIBVIRT_DEFAULT_URI="qemu:///system"
-export PATH=$LOCAL_BIN:$CARGO_BIN:$GEM_BIN:$PATH
+export PATH=$LOCAL_BIN:$CARGO_BIN:$PATH
 ## `pyenv`
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

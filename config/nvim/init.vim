@@ -42,6 +42,8 @@ set spelllang=en_us,en_au
 set termguicolors
 colorscheme dracula
 syntax enable
+" Enable transparency
+hi normal guibg=000000
 
 "-NerdTree
 "
@@ -49,7 +51,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NerdTree is only thing left open.
+" Automatically close nvim if NerdTree is only thing left open.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
     \ b:NERDTree.isTabTree()) | q | endif
 " Toggle with ctrl-t.

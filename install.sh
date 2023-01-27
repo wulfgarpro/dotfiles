@@ -2,13 +2,17 @@
 #set -x
 set -e
 
-# Assumptions - Arch Linux with a well defined $PATH.
+# Assumptions - An initial Arch Linux install with internet access and a
+# well-defined $PATH.
 
 if [ "$1" == "--help" ]; then
     echo "./install"
     exit 1
 fi
 
+read -n 1 -s -r -p "Press any key to continue"
+
+echo -e "\n"
 echo "############################################"
 echo "++ Installing base and cloning submodules ++"
 echo "############################################"
@@ -16,34 +20,37 @@ sudo pacman -Syuq --noconfirm
 sudo pacman -Sq --noconfirm --needed \
     alacritty \
     base-devel \
-    bat \
     fd \
     firefox \
     git \
     git-lfs \
-    go \
+    kitty \
+    light \
     meld \
     neovim \
-    nodejs \
+    pamixer \
     pipewire-pulse \
+    polkit \
     pyenv \
+    python-pillow \
     python-pynvim \
+    ranger \
     ripgrep \
-    ruby \
-    rustup \
     sway \
     swaybg \
-    swayidle
+    swayidle \
     swaylock \
     tmux \
     tree \
+    ttf-jetbrains-mono \
     ttf-ubuntu-font-family \
+    unzip \
     waybar \
     wofi \
     xplr \
     xorg-xwayland
-
 sudo pacman -Sqcc --noconfirm
+
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
 paru -Syuq --noconfirm
@@ -51,6 +58,7 @@ paru -Sq --noconfirm --needed \
     swaync \
     vale-bin
 paru -Sqcc --noconfirm
+
 git submodule update --init
 
 echo "############################################"
@@ -59,7 +67,9 @@ echo "############################################"
 declare -a resources=(
     "config/alacritty"
     "config/fontconfig"
+    "config/kitty"
     "config/nvim"
+    "config/ranger"
     "config/sway"
     "config/tmux"
     "config/vale"
@@ -74,6 +84,12 @@ do
     # The below is a destructive operation!
     ln -fv -ns "$PWD/$i" "$HOME/.$i"
 done
+
+# Add specific `alacritty` config for host "mul"
+if [[ "$HOSTNAME" == "mul" ]]; then
+    echo -e "shell:\n  args:\n    - -l\n    - -c\n    - \"tmux new\"" > \
+        ~/.config/alacritty/mul.yml
+fi
 
 echo "############################################"
 echo "++ Installing nvim plugins with vim-plug ++"
@@ -92,11 +108,6 @@ echo "++ Installing nvim Tree-sitter parsers ++"
 echo "############################################"
 echo "nvim '+TSInstallSync! ...' +qall"
 nvim '+TSInstallSync! bash c cpp markdown python rust' +qall
-
-echo "############################################"
-echo "++ Installing JetBrainsMono font ++"
-echo "############################################"
-wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Medium/complete/JetBrains%20Mono%20Medium%20Nerd%20Font%20Complete.ttf -P "$HOME/.local/share/fonts/JetBrains && fc-cache -vf"
 
 echo "############################################"
 echo "++ Done... run exec /bin/zsh ++"

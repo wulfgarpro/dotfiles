@@ -880,6 +880,8 @@
 #-Config
 import:
   - ~/.config/alacritty/alacritty/dracula.yml
+  # Load custom config for host "mul" if the file exists
+  - ~/.config/alacritty/mul.yml
 
 font:
   normal:

@@ -220,16 +220,19 @@ bindsym $mod+r mode "resize"
 set $term kitty
 
 # Use `wofi` menu; `drun` only matches and displays hits for programs that
-# have "Desktop" entries.
+# have "Desktop" entries
 set $menu wofi --show=drun --lines=5 --prompt=""
+
+# Set wallpaper
+set $wallpaper ~/.config/sway/wallpaper.png
 
 # Configure `swayidle` to lock screen with `swaylock` as appropriate
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c 000000 -i $wallpaper' \
          timeout 600 'swaymsg "output * power off"' \
          resume 'swaymsg "output * power on"' \
          before-sleep 'playerctl pause' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -c 000000 -i $wallpaper'
 
 # Configure touchpad settings
 input "1739:0:Synaptics_TM3257-001" {
@@ -245,19 +248,25 @@ bar {
 }
 
 # Don't display title bar on windows
-default_border pixel 1
-
-gaps inner 10
-
-# Activate `swaylock` lock screen keybind
-bindsym $mod+Print exec swaylock -f
+#default_border pixel 1
 
 # Start `swaync` notification center & keybind
 exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
-# Set a random wallpaper
-set $wallpapers_path $HOME/Pictures/wallpapers
-output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+# Set a wallpaper
+output * bg $wallpaper fill
+
+# Activate `swaylock` lock screen keybind
+bindsym $mod+Print exec swaylock -f -i $wallpaper
+
+# Bind `light` to brightness up-down fn keys
+bindsym XF86MonBrightnessUp exec light -A 20
+bindsym XF86MonBrightnessDown exec light -U 20
+
+# Bind `pactl` to audio fn keys
+bindsym XF86AudioMute exec pamixer --toggle-mute
+bindsym XF86AudioRaiseVolume exec pamixer --increase 1
+bindsym XF86AudioLowerVolume exec pamixer --decrease 1
 
 include /etc/sway/config.d/*

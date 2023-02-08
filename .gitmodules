@@ -10,3 +10,9 @@
 [submodule "config/alacritty/alacritty"]
 	path = config/alacritty/alacritty
 	url = https://github.com/dracula/alacritty.git
+[submodule "config/wofi"]
+	path = config/wofi
+	url = https://github.com/dracula/wofi.git
+[submodule "config/kitty/dracula"]
+	path = config/kitty/dracula
+	url = https://github.com/dracula/kitty.git

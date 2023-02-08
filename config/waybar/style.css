@@ -1,12 +1,30 @@
+/*
+
+  Dracula Color Palette
+  --
+
+  Background:   #282a36
+  Current line: #44475a
+  Foreground:   #f8f8f2
+  Comment:      #6272a4
+  Cyan:         #8be9fd
+  Green:        #50fa7b
+  Orange:       #ffb86c
+  Pink:         #ff79c6
+  Purple:       #bd93f9
+  Red:          #ff5555
+  Yellow:       #f1fa8c
+
+*/
+
 * {
-	font-size: 20px;
-    /* Specifying Hack as the font displays the arrows correctly*/
-	font-family: Hack;
+	font-size: 13pt;
+	font-family: JetBrainsMono;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+	background: #282a36;
+	color: #f8f8f2;
 }
 
 #custom-right-arrow-dark,
@@ -28,16 +46,17 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
+#network,
 #tray {
 	background: #1a1a1a;
 }
 
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: #f8f8f2;
 }
 #workspaces button.focused {
-	color: #268bd2;
+	color: #8be9fd;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
@@ -50,19 +69,22 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #268bd2;
+	color: #bd93f9;
 }
 #memory {
-	color: #2aa198;
+	color: #8be9fd;
 }
 #cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
+	color: #50fa7b;
 }
 #disk {
-	color: #b58900;
+	color: #f1fa8c;
+}
+#network {
+    color: #ffb86c;
+}
+#battery {
+	color: #ff79c6;
 }
 
 #clock,
@@ -70,7 +92,7 @@ window#waybar {
 #memory,
 #cpu,
 #battery,
+#network,
 #disk {
 	padding: 0 10px;
 }
-

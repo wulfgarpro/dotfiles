@@ -74,6 +74,7 @@ declare -a resources=(
     "config/tmux"
     "config/vale"
     "config/waybar"
+    "config/wofi"
     "config/zsh"
     "gitconfig"
     "p10k.zsh"
@@ -82,10 +83,11 @@ declare -a resources=(
 for i in "${resources[@]}"
 do
     # The below is a destructive operation!
-    ln -fv -ns "$PWD/$i" "$HOME/.$i"
+    mv "$HOME/.{$i,$i-bak-$(date +%Y%m%d)}"
+    ln -sfT "$PWD/$i" "$HOME/.$i"
 done
 
-# Add specific `alacritty` config for host "mul"
+# Add specific `alacritty` config for host "mul".
 if [[ "$HOSTNAME" == "mul" ]]; then
     echo -e "shell:\n  args:\n    - -l\n    - -c\n    - \"tmux new\"" > \
         ~/.config/alacritty/mul.yml

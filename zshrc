@@ -66,6 +66,8 @@ eval "$(pyenv init -)"
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export MOD_ENABLE_WAYLAND=1
 fi
+## If using `kitty`, use "kitten" `ssh` wrapper.
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 #-Theme (cont.)
 # Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh

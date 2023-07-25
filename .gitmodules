@@ -7,12 +7,6 @@
 [submodule "config/zsh/themes/powerlevel10k"]
 	path = config/zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "config/alacritty/alacritty"]
-	path = config/alacritty/alacritty
-	url = https://github.com/dracula/alacritty.git
 [submodule "config/wofi"]
 	path = config/wofi
 	url = https://github.com/dracula/wofi.git
-[submodule "config/kitty/dracula"]
-	path = config/kitty/dracula
-	url = https://github.com/dracula/kitty.git

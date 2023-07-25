@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-#set -x
 set -e
+set -o pipefail
+set -u
 
 # Assumptions - An initial Arch Linux install with internet access and a
 # well-defined $PATH.
@@ -18,13 +19,11 @@ echo "++ Installing base and cloning submodules ++"
 echo "############################################"
 sudo pacman -Syuq --noconfirm
 sudo pacman -Sq --noconfirm --needed \
-    alacritty \
     base-devel \
     fd \
     firefox \
     git \
     git-lfs \
-    kitty \
     light \
     meld \
     neovim \
@@ -65,9 +64,7 @@ echo "############################################"
 echo "++ Configuring environment ++"
 echo "############################################"
 declare -a resources=(
-    "config/alacritty"
     "config/fontconfig"
-    "config/kitty"
     "config/nvim"
     "config/ranger"
     "config/sway"
@@ -86,12 +83,6 @@ do
     mv "$HOME/.{$i,$i-bak-$(date +%Y%m%d)}"
     ln -sfT "$PWD/$i" "$HOME/.$i"
 done
-
-# Add specific `alacritty` config for host "mul".
-if [[ "$HOSTNAME" == "mul" ]]; then
-    echo -e "shell:\n  args:\n    - -l\n    - -c\n    - \"tmux new\"" > \
-        ~/.config/alacritty/mul.yml
-fi
 
 echo "############################################"
 echo "++ Installing nvim plugins with vim-plug ++"

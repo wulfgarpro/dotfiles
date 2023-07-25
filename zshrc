@@ -56,15 +56,18 @@ LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin
 
 #-Environment
-export LIBVIRT_DEFAULT_URI="qemu:///system"
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PATH
-## `pyenv`
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+## Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-## Enable wayland display protocol for Firefox if running wayland
+## Wayland
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+    ## Enable Wayland display protocol for Firefox
     export MOD_ENABLE_WAYLAND=1
+    ## Don't reparent Java AWT/Swing apps
+    export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 
 #-Theme (cont.)

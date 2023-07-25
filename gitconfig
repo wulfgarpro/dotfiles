@@ -15,3 +15,5 @@
 	smudge = git-lfs smudge -- %f
 [submodule]
 	recurse = true
+[init]
+	defaultBranch = main

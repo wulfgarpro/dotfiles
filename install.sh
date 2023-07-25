@@ -6,12 +6,13 @@ set -u
 # Assumptions - An initial Arch Linux install with internet access and a
 # well-defined $PATH.
 
-if [ "$1" == "--help" ]; then
+
+if [ "${1-}" == "--help" ]; then
     echo "./install"
     exit 1
 fi
 
-read -n 1 -s -r -p "Press any key to continue"
+read -n 1 -s -r -p "Press any key to continue..."
 
 echo -e "\n"
 echo "############################################"
@@ -45,6 +46,7 @@ sudo pacman -Sq --noconfirm --needed \
     ttf-ubuntu-font-family \
     unzip \
     waybar \
+    wezterm \
     wofi \
     xplr \
     xorg-xwayland
@@ -71,6 +73,7 @@ declare -a resources=(
     "config/tmux"
     "config/vale"
     "config/waybar"
+    "config/wezterm"
     "config/wofi"
     "config/zsh"
     "gitconfig"
@@ -80,8 +83,8 @@ declare -a resources=(
 for i in "${resources[@]}"
 do
     # The below is a destructive operation!
-    mv "$HOME/.{$i,$i-bak-$(date +%Y%m%d)}"
-    ln -sfT "$PWD/$i" "$HOME/.$i"
+    mv "$HOME/.$i" "$HOME/.$i.backup-$(date +%Y%m%d)" 2>/dev/null || true
+    ln -sfT "$(pwd)/$i" "$HOME/.$i"
 done
 
 echo "############################################"

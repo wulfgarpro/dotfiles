@@ -216,8 +216,8 @@ bindsym $mod+r mode "resize"
 
 #-Custom configuration
 
-# Use `kitty` term
-set $term kitty
+# Use `wezterm` term
+set $term wezterm
 
 # Use `wofi` menu; `drun` only matches and displays hits for programs that
 # have "Desktop" entries

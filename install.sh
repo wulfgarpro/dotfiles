@@ -43,6 +43,7 @@ sudo pacman -Sq --noconfirm --needed \
     tmux \
     tree \
     ttf-jetbrains-mono \
+    ttf-nerd-fonts-symbols-mono \
     ttf-ubuntu-font-family \
     unzip \
     waybar \

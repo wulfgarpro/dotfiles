@@ -57,6 +57,7 @@ CARGO_BIN=$HOME/.cargo/bin
 
 #-Environment
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PATH
+## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 ## Pyenv
 export PYENV_ROOT="$HOME/.pyenv"

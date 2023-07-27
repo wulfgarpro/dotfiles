@@ -55,11 +55,11 @@ sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-paru -Syuq --noconfirm
-paru -Sq --noconfirm --needed \
-    swaync \
-    vale-bin
-paru -Sqcc --noconfirm
+#paru -Syuq --noconfirm
+#paru -Sq --noconfirm --needed \
+#    swaync \
+#    vale-bin
+#paru -Sqcc --noconfirm
 
 git submodule update --init
 

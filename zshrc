@@ -17,6 +17,7 @@ source "${HOME}/.config/zsh/lib/key-bindings.zsh"
 source "${HOME}/.config/zsh/lib/directories.zsh"
 source "${HOME}/.config/zsh/lib/theme-and-appearance.zsh"
 source "${HOME}/.config/zsh/lib/completion.zsh"
+source "${HOME}/.config/zsh/lib/colored-man-pages.plugin.zsh"
 source "${HOME}/.config/zsh/lib/history.zsh"
 source "${HOME}/.config/zsh/lib/git.zsh"
 

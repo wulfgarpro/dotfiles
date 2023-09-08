@@ -73,7 +73,13 @@ local plugins = {
   {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
-    opts = overrides.copilot,
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = true,
+      },
+    },
   },
 
   {

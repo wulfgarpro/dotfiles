@@ -1,2 +1,3 @@
 config/alacritty/mul.yml
+config/systemd/user/timers.target.wants
 *.orig

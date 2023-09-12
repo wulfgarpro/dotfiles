@@ -22,10 +22,12 @@ echo "############################################"
 sudo pacman -Syuq --noconfirm
 sudo pacman -Sq --noconfirm --needed \
   base-devel \
+  curl \
   fd \
   firefox \
   git \
   git-lfs \
+  jq \
   light \
   meld \
   neovim \
@@ -49,6 +51,7 @@ sudo pacman -Sq --noconfirm --needed \
   unzip \
   waybar \
   wezterm \
+  wget \
   wofi \
   xplr \
   xorg-xwayland
@@ -56,11 +59,10 @@ sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-#paru -Syuq --noconfirm
-#paru -Sq --noconfirm --needed \
-#    swaync \
-#    vale-bin
-#paru -Sqcc --noconfirm
+paru -Sq --noconfirm --needed \
+  swaync \
+  vale-bin
+paru -Sqcc --noconfirm
 
 echo "############################################"
 echo "++ Configuring environment ++"
@@ -70,6 +72,7 @@ declare -a resources=(
   "config/nvim"
   "config/ranger"
   "config/sway"
+  "config/systemd"
   "config/tmux"
   "config/vale"
   "config/waybar"
@@ -90,6 +93,10 @@ for i in "${resources[@]}"; do
     ln -sfT "$(pwd)/config/custom" "$HOME/.config/nvim/lua/custom"
   fi
 done
+
+# Reload and enable the `set-bing-wallpaper` systemd timer.
+systemctl --user daemon-reload
+systemctl --user enable --now set-bing-wallpaper.timer
 
 echo "############################################"
 echo "++ Done... run exec /bin/zsh ++"

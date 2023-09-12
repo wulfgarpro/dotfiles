@@ -224,15 +224,13 @@ set $term wezterm
 set $menu wofi --show=drun --lines=5 --prompt=""
 
 # Set wallpaper
-set $wallpaper ~/.config/sway/wallpaper.png
+set $wallpaper ~/Pictures/Bing/wallpaper.jpg
 
 # Configure `swayidle` to lock screen with `swaylock` as appropriate
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000 -i $wallpaper' \
-         timeout 600 'swaymsg "output * power off"' \
-         resume 'swaymsg "output * power on"' \
-         before-sleep 'playerctl pause' \
-         before-sleep 'swaylock -f -c 000000 -i $wallpaper'
+  timeout 300 '~/.config/sway/swaylock-wrapper.sh' \
+  timeout 600 'systemctl suspend' \
+  resume 'swaymsg "output * dpms on"' &
 
 # Configure touchpad settings
 input "1739:0:Synaptics_TM3257-001" {
@@ -258,7 +256,7 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 output * bg $wallpaper fill
 
 # Activate `swaylock` lock screen keybind
-bindsym $mod+Print exec swaylock -f -i $wallpaper
+bindsym $mod+Shift+Ctrl+l exec ~/.config/sway/swaylock-wrapper.sh
 
 # Bind `light` to brightness up-down fn keys
 bindsym XF86MonBrightnessUp exec light -A 20

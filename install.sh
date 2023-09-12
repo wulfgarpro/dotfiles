@@ -3,7 +3,7 @@ set -e
 set -o pipefail
 set -u
 
-# Assumptions - An initial Arch Linux install with internet access and a
+# Assumptions - an initial Arch Linux install with internet access and a
 # well-defined $PATH.
 
 if [ "${1-}" == "--help" ]; then
@@ -43,7 +43,6 @@ sudo pacman -Sq --noconfirm --needed \
   swaybg \
   swayidle \
   swaylock \
-  tmux \
   tree \
   ttf-jetbrains-mono \
   ttf-nerd-fonts-symbols-mono \
@@ -60,8 +59,7 @@ sudo pacman -Sqcc --noconfirm
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
 paru -Sq --noconfirm --needed \
-  swaync \
-  vale-bin
+  swaync
 paru -Sqcc --noconfirm
 
 echo "############################################"
@@ -73,8 +71,6 @@ declare -a resources=(
   "config/ranger"
   "config/sway"
   "config/systemd"
-  "config/tmux"
-  "config/vale"
   "config/waybar"
   "config/wezterm"
   "config/wofi"

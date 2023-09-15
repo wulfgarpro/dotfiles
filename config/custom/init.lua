@@ -13,11 +13,6 @@ vim.cmd [[
   autocmd BufRead,BufNewFile Containerfile set filetype=dockerfile
 ]]
 
--- Apply ExtraWhitespace only to certain file types
-vim.cmd [[
-  autocmd FileType cpp,c,python,markdown,tex,lua,gitcommit,yaml,json,dockerfile,plaintex,rust,cmake,clang-format,clang-tidy match ExtraWhitespace /\s\+$/
-  autocmd FileType cpp,c,python,markdown,tex,lua,gitcommit,yaml,json,dockerfile,plaintex,rust,cmake,clang-format,clang-tidy autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-  autocmd FileType cpp,c,python,markdown,tex,lua,gitcommit,yaml,json,dockerfile,plaintex,rust,cmake,clang-format,clang-tidy autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-  autocmd FileType cpp,c,python,markdown,tex,lua,gitcommit,yaml,json,dockerfile,plaintex,rust,cmake,clang-format,clang-tidy autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-  autocmd FileType cpp,c,python,markdown,tex,lua,gitcommit,yaml,json,dockerfile,plaintex,rust,cmake,clang-format,clang-tidy autocmd BufWinLeave * call clearmatches()
-]]
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false -- don't fold by default

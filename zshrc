@@ -48,6 +48,7 @@ alias cw="cargo watch -x" # `cargo install cargo-watch`
 alias n="nvim"
 alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
+alias toggle-idle="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 
 ## Tools
 alias smbmap="smbmap.py"

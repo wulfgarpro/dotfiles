@@ -58,6 +58,8 @@ LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin
 
 #-Environment
+export CC=clang
+export CXX=clang++
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PATH
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"

@@ -226,13 +226,13 @@ set $menu wofi --show=drun --lines=5 --prompt=""
 # Set wallpaper
 set $wallpaper ~/Pictures/Bing/wallpaper.jpg
 
-# Configure `swayidle` to lock screen with `swaylock` as appropriate
+# Configure `swayidle` to lock screen with `swaylock` and suspend system as
+# appropriate.
 exec swayidle -w \
   timeout 300 '~/.config/sway/swaylock-wrapper.sh' \
-  timeout 600 'systemctl suspend' \
+  timeout 600 'if ! systemd-detect-virt -q; then systemctl suspend; fi' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep '~/.config/sway/swaylock-wrapper.sh'
-
 
 # Configure touchpad settings
 input "1739:0:Synaptics_TM3257-001" {

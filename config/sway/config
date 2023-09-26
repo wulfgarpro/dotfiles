@@ -248,7 +248,11 @@ bar {
 }
 
 # Don't display title bar on windows
-#default_border pixel 1
+default_border pixel 1
+# gaps inner 5
+# gaps outer 5
+
+client.focused #8BE9FD #8BE9FD #FFFFFF #8BE9FD
 
 # Start `swaync` notification center & keybind
 exec swaync

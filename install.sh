@@ -31,6 +31,7 @@ sudo pacman -Sq --noconfirm --needed \
   light \
   meld \
   neovim \
+  net-tools \
   pamixer \
   pipewire-pulse \
   polkit \

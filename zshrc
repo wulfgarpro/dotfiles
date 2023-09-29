@@ -54,13 +54,13 @@ alias toggle-idle="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias smbmap="smbmap.py"
 
 #-Variables
+OTHER_BIN=$HOME/bin
 LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin
 
 #-Environment
 export CC=clang
 export CXX=clang++
-export PATH=$LOCAL_BIN:$CARGO_BIN:$PATH
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 ## Pyenv
@@ -74,6 +74,8 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     ## Don't reparent Java AWT/Swing apps
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
+## Set PATH
+export PATH=$OTHER_BIN:$LOCAL_BIN:$CARGO_BIN:$PATH
 
 #-Theme (cont.)
 # Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh

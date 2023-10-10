@@ -27,6 +27,7 @@ sudo pacman -Sq --noconfirm --needed \
   firefox \
   git \
   git-lfs \
+  grim \
   jq \
   light \
   meld \
@@ -40,6 +41,7 @@ sudo pacman -Sq --noconfirm --needed \
   python-pynvim \
   ranger \
   ripgrep \
+  slurp \
   sway \
   swaybg \
   swayidle \

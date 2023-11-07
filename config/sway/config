@@ -58,6 +58,9 @@ set $right l
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+set $highlight #BD93F9
+set $prompt #50FA7B
+
 ### Key bindings
 #
 # Basics:
@@ -248,11 +251,18 @@ bar {
 }
 
 # Don't display title bar on windows
-default_border pixel 1
-# gaps inner 5
-# gaps outer 5
+default_border none
+gaps inner 12
+gaps outer 4
 
-client.focused #8BE9FD #8BE9FD #FFFFFF #8BE9FD
+default_border pixel
+default_floating_border pixel
+hide_edge_borders smart
+
+client.focused #8BE9FD #285577 #FFFFFF $highlight $highlight
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50 #5F676A
+client.unfocused #333333 #222222 #888888 #292D2E #222222
+client.urgent #2F343A #900000 #FFFFFF #900000 #900000
 
 # Start `swaync` notification center & keybind
 exec swaync

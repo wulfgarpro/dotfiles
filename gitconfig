@@ -6,8 +6,6 @@
 	tool = meld
 [difftool]
 	prompt = false
-[pull]
-	ff = true
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -17,3 +15,5 @@
 	recurse = true
 [init]
 	defaultBranch = main
+[user]
+	name = James Fraser

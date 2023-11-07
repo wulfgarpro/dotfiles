@@ -45,6 +45,7 @@ M.mason = {
     "clangd",
     "clang-format",
     "cmake-language-server",
+    "buildifier", -- Bazel
 
     -- shell
     "bash-language-server",

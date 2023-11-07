@@ -47,9 +47,10 @@ sudo pacman -Sq --noconfirm --needed \
   swayidle \
   swaylock \
   tree \
-  ttf-jetbrains-mono \
-  ttf-nerd-fonts-symbols-mono \
-  ttf-ubuntu-font-family \
+  ttf-dejavu \
+  ttf-fira-sans \
+  ttf-font-awesome \
+  ttf-jetbrains-mono-nerd \
   unzip \
   waybar \
   wezterm \
@@ -69,6 +70,7 @@ echo "############################################"
 echo "++ Configuring environment ++"
 echo "############################################"
 declare -a resources=(
+  "config/gtk-3.0"
   "config/fontconfig"
   "config/nvim"
   "config/ranger"

@@ -25,6 +25,8 @@ sudo pacman -Sq --noconfirm --needed \
   curl \
   fd \
   firefox \
+  gedit \
+  gedit-plugins \
   git \
   git-lfs \
   grim \

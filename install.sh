@@ -90,11 +90,6 @@ for i in "${resources[@]}"; do
   # The below is a destructive operation!
   rm -rf "$HOME/.$i"
   ln -sfT "$(pwd)/$i" "$HOME/.$i"
-  if [[ "$i" == "config/nvim" ]]; then
-    # Clean NvChad cache and install custom configs.
-    rm -rf ~/.local/share/nvim
-    ln -sfT "$(pwd)/config/custom" "$HOME/.config/nvim/lua/custom"
-  fi
 done
 
 # Reload and enable the `set-bing-wallpaper` systemd timer.

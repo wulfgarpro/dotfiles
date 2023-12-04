@@ -10,6 +10,3 @@
 [submodule "config/wezterm/colors/dracula"]
 	path = config/wezterm/colors/dracula
 	url = https://github.com/dracula/wezterm.git
-[submodule "config/nvim"]
-	path = config/nvim
-	url = https://github.com/NvChad/NvChad.git

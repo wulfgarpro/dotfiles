@@ -59,7 +59,8 @@ sudo pacman -Sq --noconfirm --needed \
   wget \
   wofi \
   xplr \
-  xorg-xwayland
+  xorg-xwayland \
+  zig
 sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:

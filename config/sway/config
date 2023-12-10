@@ -252,8 +252,8 @@ bar {
 
 # Don't display title bar on windows
 default_border none
-gaps inner 12
-gaps outer 4
+gaps inner 8
+gaps outer 2
 
 default_border pixel
 default_floating_border pixel

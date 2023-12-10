@@ -31,6 +31,7 @@ sudo pacman -Sq --noconfirm --needed \
   git-lfs \
   grim \
   jq \
+  lazygit \
   light \
   meld \
   neovim \

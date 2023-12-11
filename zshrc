@@ -62,12 +62,10 @@ CARGO_BIN=$HOME/.cargo/bin
 #-Environment
 export CC=clang
 export CXX=clang++
+export PYENV_ROOT="$HOME/.pyenv"
+
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
-## Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 ## Wayland
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     ## Enable Wayland display protocol for Firefox
@@ -76,7 +74,10 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 ## Set PATH
-export PATH=$OTHER_BIN:$LOCAL_BIN:$CARGO_BIN:$PATH
+export PATH=$OTHER_BIN:$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
+## Pyenv
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 #-Theme (cont.)
 # Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh

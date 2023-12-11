@@ -40,9 +40,10 @@ alias gpl="git pull"
 alias gs="git stash"
 alias gsp="git stash pop"
 
-## Project
+## Projects
 alias cnt="cargo nextest run" # `cargo install cargo-nextest`
 alias cw="cargo watch -x" # `cargo install cargo-watch`
+alias dots="cd $HOME/code/dotfiles"
 
 ## System
 alias n="nvim"

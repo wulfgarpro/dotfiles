@@ -56,11 +56,11 @@ alias toggle-idle="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias smbmap="smbmap.py"
 
 #-Variables
-OTHER_BIN=$HOME/bin
 LOCAL_BIN=$HOME/.local/bin
 CARGO_BIN=$HOME/.cargo/bin
 
 #-Environment
+export EDITOR=nvim
 export CC=clang
 export CXX=clang++
 export PYENV_ROOT="$HOME/.pyenv"
@@ -75,9 +75,8 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 ## Set PATH
-export PATH=$OTHER_BIN:$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
+export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
 ## Pyenv
-#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 #-Theme (cont.)

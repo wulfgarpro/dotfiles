@@ -43,7 +43,7 @@ alias gsp="git stash pop"
 ## Projects
 alias cnt="cargo nextest run" # `cargo install cargo-nextest`
 alias cw="cargo watch -x" # `cargo install cargo-watch`
-alias dots="cd $HOME/code/dotfiles"
+alias dots="cd $HOME/code/wulfgarpro/dotfiles"
 
 ## System
 alias n="nvim"

@@ -17,6 +17,7 @@ return {
         "sql",
         "zig",
         "python",
+        "xml",
       },
 
       -- matchup = {

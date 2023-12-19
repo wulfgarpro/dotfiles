@@ -37,6 +37,7 @@ sudo pacman -Sq --noconfirm --needed \
 	meld \
 	neovim \
 	net-tools \
+	noto-fonts-cjk \
 	pamixer \
 	pipewire-pulse \
 	polkit \
@@ -55,6 +56,8 @@ sudo pacman -Sq --noconfirm --needed \
 	ttf-fira-sans \
 	ttf-font-awesome \
 	ttf-jetbrains-mono-nerd \
+	ttf-nerd-fonts-symbols \
+	ttf-nerd-fonts-symbols-mono \
 	unzip \
 	waybar \
 	wezterm \

@@ -1,7 +1,1 @@
-return {
-    {
-        "Mofiqul/dracula.nvim",
-        lazy = true,
-        priority = 1000,
-    },
-}
+return { "rebelot/kanagawa.nvim" }

@@ -1,0 +1,64 @@
+{
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "all-outputs": true
+  },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%I:%M %p | %a, %d %b %Y}"
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format-discharging": "{icon} {capacity}%",
+    "format": " {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+  "cpu": {
+    "format": "{usage}% <span color=\"#7aa2f7\"></span>",
+
+    "interval": 4
+  },
+  "memory": {
+    "format": "{used}GiB <span color=\"#7aa2f7\"></span>",
+    "interval": 4
+  },
+  "disk": {
+    "format": "{percentage_used:2}% <span color=\"#7aa2f7\"></span>",
+    "path": "/",
+    "interval": 4
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-disconnected": "⚠ Disconnected"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󰂑",
+      "headset": "󰂑",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  }
+}

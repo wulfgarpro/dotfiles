@@ -1,0 +1,16 @@
+[
+  {
+    "layer": "top",
+    "position": "bottom",
+    "mod": "dock",
+    "gtk-layer-shell": true,
+    "height": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "battery", "tray"],
+    "include": ["~/.config/waybar/modules.jsonc"]
+  }
+]

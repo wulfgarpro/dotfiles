@@ -1,111 +1,63 @@
-/*
-
-  Dracula Color Palette
-  --
-
-  Background:   #282a36
-  Current line: #44475a
-  Foreground:   #f8f8f2
-  Comment:      #6272a4
-  Cyan:         #8be9fd
-  Green:        #50fa7b
-  Orange:       #ffb86c
-  Pink:         #ff79c6
-  Purple:       #bd93f9
-  Red:          #ff5555
-  Yellow:       #f1fa8c
-
-*/
-
 * {
-  border: 1px;
-  font-family: sans-serif, FontAwesome;
-  font-size: 17px;
+  border: none;
+  border-radius: 0;
+  font-family: monospace;
+  font-size: 13pt;
 }
 
 window#waybar {
-  background: #282a36;
-  color: #f8f8f2;
-}
-
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-  color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-  color: #292b2e;
-  background: #1a1a1a;
-}
-
-#clock.1,
-#clock.2,
-#clock.3,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#network,
-#tray {
-  background: #1a1a1a;
-}
-
-#pulseaudio {
-  color: #bd93f9;
-}
-#memory {
-  color: #8be9fd;
-}
-#cpu {
-  color: #50fa7b;
-}
-#disk {
-  color: #f1fa8c;
-}
-#network {
-  color: #ffb86c;
-}
-#battery {
-  color: #ff79c6;
+  background-color: #24283b;
+  color: white;
 }
 
 #workspaces {
-  padding: 0 4px 0 4px;
+  color: #c0caf5;
+  background-color: #24283b;
+}
+
+#scratchpad {
+  color: #c0caf5;
+  margin-left: 15px;
+  background-color: #24283b;
+}
+
+#mode {
+  color: #c0caf5;
+  margin-left: 15px;
+  background-color: #24283b;
 }
 
 #workspaces button {
-  padding: 0 4px 0 4px;
-  background-color: transparent;
-  color: #f8f8f2;
-  margin-bottom: 2px;
-  margin-top: 2px;
-  border: none;
-}
-
-#workspaces button:hover {
-  box-shadow: none;
-  text-shadow: none;
-  background: none;
-  transition: none;
-  color: #8be9fd;
+  padding: 5px 10px;
+  color: #c0caf5;
 }
 
 #workspaces button.focused {
-  color: #50fa7b;
+  background-color: #7aa2f7;
+  color: #c0caf5;
 }
 
-#workspaces button.urgent {
-  color: #ff8080;
+#workspaces button:hover {
+  background: #7dcfff;
+  color: #24283b;
+  box-shadow: none;
+  text-shadow: none;
 }
 
-#clock,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
 #network,
-#tray,
-#disk {
-  padding: 0 10pt;
+#pulseaudio,
+#battery,
+#clock,
+#tray {
+  background-color: #24283b;
+  color: #c0caf5;
+  padding: 0px 15px;
+}
+
+#battery.charging {
+  color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #f7768e;
 }

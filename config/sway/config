@@ -58,9 +58,6 @@ set $right l
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-set $highlight #BD93F9
-set $prompt #50FA7B
-
 ### Key bindings
 #
 # Basics:
@@ -222,9 +219,8 @@ bindsym $mod+r mode "resize"
 # Use `wezterm` term
 set $term wezterm
 
-# Use `wofi` menu; `drun` only matches and displays hits for programs that
-# have "Desktop" entries
-set $menu wofi --show=drun --lines=5 --prompt=""
+# Use `wofi` menu
+set $menu wofi --hide-scroll | xargs swaymsg exec --
 
 # Set wallpaper
 set $wallpaper ~/Pictures/Bing/wallpaper.jpg
@@ -247,26 +243,18 @@ input "1739:0:Synaptics_TM3257-001" {
 
 # Use `waybar`
 bar {
-    swaybar_command waybar
+  swaybar_command waybar
 }
 
-# Don't display title bar on windows
-default_border none
-gaps inner 8
-gaps outer 2
+default_border pixel 2
+default_floating_border pixel 2
+#gaps inner 2
+#gaps outer 2
 
-default_border pixel
-default_floating_border pixel
-hide_edge_borders smart
-
-client.focused #8BE9FD #285577 #FFFFFF $highlight $highlight
-client.focused_inactive #333333 #5F676A #FFFFFF #484E50 #5F676A
-client.unfocused #333333 #222222 #888888 #292D2E #222222
-client.urgent #2F343A #900000 #FFFFFF #900000 #900000
-
-# Start `swaync` notification center & keybind
-exec swaync
-bindsym $mod+Shift+n exec swaync-client -t -sw
+client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 # Set a wallpaper
 output * bg $wallpaper fill

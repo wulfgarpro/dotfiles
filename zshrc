@@ -40,17 +40,12 @@ alias gpl="git pull"
 alias gs="git stash"
 alias gsp="git stash pop"
 
-## Projects
-alias cnt="cargo nextest run" # `cargo install cargo-nextest`
-alias cw="cargo watch -x" # `cargo install cargo-watch`
-alias dots="cd $HOME/code/wulfgarpro/dotfiles"
-
 ## System
 alias n="nvim"
 alias r="ranger"
 alias sbw="set-bing-wallpaper.sh"
 alias sudo="sudo " # Space allows `sudo` aliases
-alias toggle-idle="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
+alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 
 ## Tools
 alias smbmap="smbmap.py"

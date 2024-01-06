@@ -37,7 +37,9 @@ sudo pacman -Sq --noconfirm --needed \
 	meld \
 	neovim \
 	net-tools \
+	noto-fonts \
 	noto-fonts-cjk \
+	noto-fonts-extra \
 	pamixer \
 	pipewire-pulse \
 	polkit \
@@ -52,9 +54,8 @@ sudo pacman -Sq --noconfirm --needed \
 	swayidle \
 	swaylock \
 	tree \
-	ttf-dejavu \
-	ttf-fira-sans \
 	ttf-font-awesome \
+	ttf-jetbrains-mono \
 	ttf-jetbrains-mono-nerd \
 	ttf-nerd-fonts-symbols \
 	ttf-nerd-fonts-symbols-mono \
@@ -70,9 +71,8 @@ sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-paru -Sq --noconfirm --needed \
-	swaync
-paru -Sqcc --noconfirm
+# paru -Sq --noconfirm --needed \
+# paru -Sqcc --noconfirm
 
 echo "############################################"
 echo "++ Configuring environment ++"

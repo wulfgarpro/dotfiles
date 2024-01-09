@@ -39,6 +39,7 @@ alias gmv="git mv"
 alias gpl="git pull"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias lg="lazygit"
 
 ## System
 alias n="nvim"

@@ -32,7 +32,6 @@ sudo pacman -Sq --noconfirm --needed \
 	grim \
 	jq \
 	lazygit \
-	light \
 	luarocks \
 	meld \
 	neovim \
@@ -71,8 +70,9 @@ sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-# paru -Sq --noconfirm --needed \
-# paru -Sqcc --noconfirm
+paru -Sq --noconfirm --needed \
+  light
+paru -Sqcc --noconfirm
 
 echo "############################################"
 echo "++ Configuring environment ++"

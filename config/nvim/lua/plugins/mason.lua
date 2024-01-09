@@ -5,6 +5,7 @@ return {
       "zls",
       "shellcheck",
       "bash-language-server",
+      "hadolint",
     },
   },
 }

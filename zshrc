@@ -42,11 +42,19 @@ alias gsp="git stash pop"
 alias lg="lazygit"
 
 ## System
-alias n="nvim"
+alias n="/opt/nvim.appimage" # Currently using NVIM v0.11.0-dev
 alias r="ranger"
-alias sbw="set-bing-wallpaper.sh"
 alias sudo="sudo " # Space allows `sudo` aliases
-alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
+alias readme="glow -p README.md"
+### Sway
+#alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
+#alias sbw="set-bing-wallpaper.sh"
+
+## Navigation
+alias code="cd $HOME/code"
+alias work="cd $HOME/code/work"
+alias personal="cd $HOME/code/personal"
+alias external="cd $HOME/code/external"
 
 ## Tools
 alias smbmap="smbmap.py"
@@ -71,10 +79,19 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 ## Set PATH
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/"
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
 ## Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 #-Theme (cont.)
-# Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+## Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

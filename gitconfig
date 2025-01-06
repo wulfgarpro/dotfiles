@@ -15,5 +15,3 @@
 	recurse = true
 [init]
 	defaultBranch = main
-[user]
-	name = James Fraser

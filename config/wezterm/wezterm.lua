@@ -17,14 +17,14 @@ end
 table.insert(config.keys, {
 	key = "e",
 	mods = "CTRL|SHIFT",
-    action = wezterm.action.PromptInputLine({
-        description = "Enter new name for tab",
-        action = wezterm.action_callback(function(window, pane, line)
-        if line then
-            window:active_tab():set_title(line)
-        end
-    end),
-    }),
+	action = wezterm.action.PromptInputLine({
+		description = "Enter new name for tab",
+		action = wezterm.action_callback(function(window, pane, line)
+			if line then
+				window:active_tab():set_title(line)
+			end
+		end),
+	}),
 })
 
 -- Move tab left
@@ -54,6 +54,6 @@ config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
 config.font_size = 13.0
 config.warn_about_missing_glyphs = false
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
 
 return config

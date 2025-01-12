@@ -1,8 +1,8 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-${HOME}/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-${HOME}/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 autoload -Uz compinit colors
@@ -31,43 +31,17 @@ source "${HOME}/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
 
 #-Aliases
-## Programming
-alias gdt="git difftool"
-alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gmt="git mergetool"
-alias gmv="git mv"
-alias gpl="git pull"
-alias gs="git stash"
-alias gsp="git stash pop"
-alias lg="lazygit"
-
-## System
-alias n="/opt/nvim.appimage" # Currently using NVIM v0.11.0-dev
-alias r="ranger"
-alias sudo="sudo " # Space allows `sudo` aliases
-alias readme="glow -p README.md"
-### Sway
-#alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
-#alias sbw="set-bing-wallpaper.sh"
-
-## Navigation
-alias code="cd $HOME/code"
-alias work="cd $HOME/code/work"
-alias personal="cd $HOME/code/personal"
-alias external="cd $HOME/code/external"
-
-## Tools
-alias smbmap="smbmap.py"
+source "${HOME}/.zsh_aliases"
 
 #-Variables
-LOCAL_BIN=$HOME/.local/bin
-CARGO_BIN=$HOME/.cargo/bin
+LOCAL_BIN=${HOME}/.local/bin
+CARGO_BIN=${HOME}/.cargo/bin
 
 #-Environment
 export EDITOR=nvim
 export CC=clang
 export CXX=clang++
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
 
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
@@ -87,7 +61,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/"
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
 ## Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

@@ -6,6 +6,7 @@ return {
       "shellcheck",
       "bash-language-server",
       "hadolint",
+      "selene",
     },
   },
 }

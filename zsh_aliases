@@ -27,3 +27,7 @@ alias external="cd $HOME/code/external"
 
 ## Tools
 alias smbmap="smbmap.py"
+
+## Other
+alias sls="sudo systemctl start openvpn-client@sls.service"
+alias ssls="sudo systemctl start openvpn-client@sls.service"

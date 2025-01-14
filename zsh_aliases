@@ -24,6 +24,7 @@ alias code="cd $HOME/code"
 alias work="cd $HOME/code/work"
 alias personal="cd $HOME/code/personal"
 alias external="cd $HOME/code/external"
+alias dotfiles="cd $HOME/code/personal/dotfiles"
 
 ## Tools
 alias smbmap="smbmap.py"

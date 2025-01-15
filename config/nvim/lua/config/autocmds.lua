@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   command = [[
     set colorcolumn=+0
     set colorcolumn+=50
-  ]]
+  ]],
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
@@ -15,12 +15,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     if vim.bo.filetype ~= "gitcommit" and vim.bo.textwidth > 0 then
       vim.wo.colorcolumn = "+0"
     end
-  end
+  end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "json", "jsonc", "markdown" },
-  callback = function()
-    vim.opt.conceallevel = 0
-  end
+  command = [[
+    set colorcolumn=+0
+    set colorcolumn+=100
+  ]],
 })

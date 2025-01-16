@@ -86,6 +86,7 @@ echo "############################################"
 declare -a resources=(
   # "config/gtk-3.0"
   # "config/fontconfig"
+  "config/neovide"
   "config/nvim"
   "config/ranger"
   # "config/sway"

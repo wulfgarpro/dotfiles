@@ -12,6 +12,7 @@ alias lg="lazygit"
 
 ## System
 alias n="/opt/nvim.appimage" # Currently using NVIM v0.11.0-dev
+alias nv="neovide"
 alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"

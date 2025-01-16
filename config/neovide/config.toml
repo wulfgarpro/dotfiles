@@ -1,0 +1,3 @@
+neovim-bin = "/opt/nvim.appimage"
+fork = true
+tabs = true

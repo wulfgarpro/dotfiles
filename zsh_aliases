@@ -32,4 +32,4 @@ alias smbmap="smbmap.py"
 
 ## Other
 alias sls="sudo systemctl start openvpn-client@sls.service"
-alias ssls="sudo systemctl start openvpn-client@sls.service"
+alias ssls="sudo systemctl stop openvpn-client@sls.service"

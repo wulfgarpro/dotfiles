@@ -38,7 +38,7 @@ LOCAL_BIN=${HOME}/.local/bin
 CARGO_BIN=${HOME}/.cargo/bin
 
 #-Environment
-export EDITOR=nvim
+export EDITOR=neovide
 export CC=clang
 export CXX=clang++
 export PYENV_ROOT="${HOME}/.pyenv"

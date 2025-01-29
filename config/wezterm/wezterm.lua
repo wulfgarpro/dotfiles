@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
-
 local config = {}
+local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 
 config.keys = {}
 
@@ -55,5 +55,7 @@ config.window_decorations = "RESIZE"
 config.font_size = 13.0
 config.warn_about_missing_glyphs = false
 -- config.window_background_opacity = 0.95
+
+smart_splits.apply_to_config(config)
 
 return config

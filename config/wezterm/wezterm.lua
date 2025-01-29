@@ -48,7 +48,7 @@ table.insert(config.keys, {
 	action = wezterm.action.CloseCurrentPane({ confirm = true }),
 })
 
-config.color_scheme = "tokyonight_moon"
+config.color_scheme = "tokyonight_storm"
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"

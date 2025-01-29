@@ -9,6 +9,7 @@ alias gpl="git pull"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias lg="lazygit"
+alias mdf="meld --diff "
 
 ## System
 alias n="/opt/nvim.appimage" # Currently using NVIM v0.11.0-dev
@@ -23,13 +24,15 @@ alias sbw="set-bing-wallpaper.sh"
 ## Navigation
 alias code="cd $HOME/code"
 alias work="cd $HOME/code/work"
+alias wk="work"
 alias personal="cd $HOME/code/personal"
+alias me="personal"
 alias external="cd $HOME/code/external"
+alias ext="external"
 alias dotfiles="cd $HOME/code/personal/dotfiles"
 alias dots="dotfiles"
-
-## Tools
-alias smbmap="smbmap.py"
+alias public="cd $HOME/Public"
+alias pub="public"
 
 ## Other
 alias sls="sudo systemctl start openvpn-client@sls.service"

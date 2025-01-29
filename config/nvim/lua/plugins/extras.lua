@@ -25,4 +25,9 @@ return {
 
   --  ui
   { import = "lazyvim.plugins.extras.ui.mini-animate" },
+
+  -- util
+  { import = "lazyvim.plugins.extras.util.octo" },
+  { import = "lazyvim.plugins.extras.util.project" },
+  { import = "lazyvim.plugins.extras.util.startuptime" },
 }

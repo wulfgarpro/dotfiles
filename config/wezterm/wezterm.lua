@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 local config = {}
-local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 
 config.keys = {}
 
@@ -42,20 +41,18 @@ table.insert(config.keys, {
 })
 
 -- Close current pane
-table.insert(config.keys, {
-	key = "w",
-	mods = "CTRL",
-	action = wezterm.action.CloseCurrentPane({ confirm = true }),
-})
+-- table.insert(config.keys, {
+-- 	key = "w",
+-- 	mods = "CTRL",
+-- 	action = wezterm.action.CloseCurrentPane({ confirm = true }),
+-- })
 
-config.color_scheme = "tokyonight_storm"
-config.tab_bar_at_bottom = true
+config.color_scheme = "Tokyo Night Storm"
+config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
-config.font_size = 13.0
-config.warn_about_missing_glyphs = false
--- config.window_background_opacity = 0.95
-
-smart_splits.apply_to_config(config)
+config.font_size = 11.0
+config.warn_about_missing_glyphs = true
+config.enable_scroll_bar = true
 
 return config

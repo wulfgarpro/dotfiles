@@ -34,34 +34,24 @@ source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plug
 source "${HOME}/.zsh_aliases"
 
 #-Variables
+ANDROID_HOME=${HOME}/Android/Sdk
 LOCAL_BIN=${HOME}/.local/bin
 CARGO_BIN=${HOME}/.cargo/bin
 
-#-Environment
-export EDITOR=neovide
-export CC=clang
-export CXX=clang++
+#-Exports
+export EDITOR=nvim
 export PYENV_ROOT="${HOME}/.pyenv"
-
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 ## Wayland
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
-    ## Enable Wayland display protocol for Firefox
-    export MOD_ENABLE_WAYLAND=1
     ## Don't reparent Java AWT/Swing apps
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
-## Set PATH
-export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/tools/bin"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/"
+## PATH
 export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
-## Pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
+
+# Init Pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

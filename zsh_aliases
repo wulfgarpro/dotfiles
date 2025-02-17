@@ -17,6 +17,7 @@ alias nv="neovide"
 alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"
+alias h="hexyl "
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

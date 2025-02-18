@@ -18,6 +18,7 @@ alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"
 alias h="hexyl "
+alias ls='eza --color=always --group-directories-first --icons'
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

@@ -1,5 +1,3 @@
-# Ensure ~/.config exists
-mkdir -Force "$HOME\.config"
 
 # Function to create symlinks using mklink
 function New-Symlink {
@@ -21,6 +19,9 @@ function New-Symlink {
     }
 }
 
+# Ensure ~/.config exists
+mkdir -Force "$HOME\.config"
+
 # Create symlinks
 New-Symlink "$PWD\Microsoft.PowerShell_profile.ps1" "$PROFILE"
 New-Symlink "$PWD\config\wezterm" "$HOME\.config\wezterm"
@@ -32,4 +33,3 @@ if (Test-Path $PROFILE) {
 } else {
     Write-Host "PowerShell profile not found: $PROFILE"
 }
-

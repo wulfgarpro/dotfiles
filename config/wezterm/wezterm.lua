@@ -74,7 +74,7 @@ config.switch_to_last_active_tab_when_closing_tab = true
 
 -- Windows configs.
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	config.font = wezterm.font("Cascadia Code PL")
+	-- config.font = wezterm.font("Cascadia Code PL")
 end
 
 return config

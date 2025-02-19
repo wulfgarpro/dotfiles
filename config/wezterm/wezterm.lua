@@ -77,4 +77,8 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- config.font = wezterm.font("Cascadia Code PL")
 end
 
+config.command_palette_font_size = 11.0
+config.command_palette_bg_color = "#24283b"
+config.command_palette_fg_color = "#c0caf5"
+
 return config

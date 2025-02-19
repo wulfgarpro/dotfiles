@@ -1,4 +1,3 @@
-
 # Function to create symlinks using mklink
 function New-Symlink {
     param (
@@ -26,6 +25,12 @@ mkdir -Force "$HOME\.config"
 New-Symlink "$PWD\Microsoft.PowerShell_profile.ps1" "$PROFILE"
 New-Symlink "$PWD\config\wezterm" "$HOME\.config\wezterm"
 New-Symlink "$PWD\config\nvim" "$HOME\.config\nvim"
+
+# Install git-aliases
+Install-Module git-aliases -Scope CurrentUser -AllowClobber
+# Install Oh My Posh
+winget install JanDeDobbeleer.OhMyPost -s winget
+# TODO: Install other critical packages, e.g. Git, Neovim, LazyGit, RipGrep, etc.
 
 # Source PowerShell profile if it exists
 if (Test-Path $PROFILE) {

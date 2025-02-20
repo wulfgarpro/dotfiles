@@ -78,18 +78,6 @@ config.command_palette_fg_color = "#c0caf5"
 
 -- Windows configs.
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	local vsdevshell = {
-		label = "Developer Powershell for VS " .. 2022,
-		args = {
-			"pwsh.exe",
-			"-noe",
-			"-c",
-			'& "C:/Program Files/Microsoft Visual Studio/2022/Professional/Common7/Tools/Launch-VsDevShell.ps1"',
-		},
-	}
-	table.insert(launch_menu, vsdevshell)
-	config.launch_menu = launch_menu
-	config.default_prog = vsdevshell.args
 end
 
 return config

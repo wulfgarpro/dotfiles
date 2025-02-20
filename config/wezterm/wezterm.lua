@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local config = {}
+local launch_menu = {}
 
 config.keys = {}
 
@@ -71,14 +72,24 @@ config.font_size = 11.0
 config.warn_about_missing_glyphs = true
 config.enable_scroll_bar = true
 config.switch_to_last_active_tab_when_closing_tab = true
-
--- Windows configs.
-if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	-- config.font = wezterm.font("Cascadia Code PL")
-end
-
 config.command_palette_font_size = 11.0
 config.command_palette_bg_color = "#24283b"
 config.command_palette_fg_color = "#c0caf5"
+
+-- Windows configs.
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	local vsdevshell = {
+		label = "Developer Powershell for VS " .. 2022,
+		args = {
+			"pwsh.exe",
+			"-noe",
+			"-c",
+			'& "C:/Program Files/Microsoft Visual Studio/2022/Professional/Common7/Tools/Launch-VsDevShell.ps1"',
+		},
+	}
+	table.insert(launch_menu, vsdevshell)
+	config.launch_menu = launch_menu
+	config.default_prog = vsdevshell.args
+end
 
 return config

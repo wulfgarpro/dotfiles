@@ -12,13 +12,15 @@ alias lg="lazygit"
 alias mdf="meld --diff "
 
 ## System
-alias n="/opt/nvim.appimage" # Currently using NVIM v0.11.0-dev
+alias nvim="/opt/nvim.appimage" # Nightly
+alias n="nvim"
 alias nv="neovide"
 alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"
 alias h="hexyl "
 alias ls='eza --color=always --group-directories-first --icons'
+alias lst="ls -t newest"
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"
@@ -39,3 +41,4 @@ alias pub="public"
 ## Other
 alias sls="sudo systemctl start openvpn-client@sls.service"
 alias ssls="sudo systemctl stop openvpn-client@sls.service"
+alias dln="sudo wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -O /opt/nvim.appimage && chmod +x /opt/nvim.appimage"

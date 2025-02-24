@@ -14,13 +14,14 @@ alias mdf="meld --diff "
 ## System
 alias nvim="/opt/nvim.appimage" # Nightly
 alias n="nvim"
-alias nv="neovide"
-alias r="ranger"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"
 alias h="hexyl "
-alias ls='eza --color=always --group-directories-first --icons'
+alias ls="eza --color=always --group-directories-first --icons"
+alias tree="eza --tree"
 alias lst="ls -t newest"
+alias y="yazi"
+alias lart='eza --long --all --sort=modified'
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

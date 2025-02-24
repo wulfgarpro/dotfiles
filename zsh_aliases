@@ -19,7 +19,6 @@ alias readme="glow -p README.md"
 alias h="hexyl "
 alias ls="eza --color=always --group-directories-first --icons"
 alias tree="eza --tree"
-alias lst="ls -t newest"
 alias y="yazi"
 alias lart='eza --long --all --sort=modified'
 ### Sway

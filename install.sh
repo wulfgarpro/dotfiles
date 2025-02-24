@@ -19,59 +19,48 @@ echo
 
 git submodule update --init
 
-# echo -e "\n"
-# echo "############################################"
-# echo "++ Installing base and cloning submodules ++"
-# echo "############################################"
+echo -e "\n"
+echo "############################################"
+echo "++ Installing base and cloning submodules ++"
+echo "############################################"
 
-# sudo pacman -Syuq --noconfirm
-# sudo pacman -Sq --noconfirm --needed \
-#   base-devel \
-#   curl \
-#   fd \
-#   firefox \
-#   gedit \
-#   gedit-plugins \
-#   git \
-#   git-lfs \
-#   grim \
-#   jq \
-#   lazygit \
-#   luarocks \
-#   meld \
-#   neovim \
-#   net-tools \
-#   noto-fonts \
-#   noto-fonts-cjk \
-#   noto-fonts-extra \
-#   pamixer \
-#   pipewire-pulse \
-#   polkit \
-#   pyenv \
-#   python-pillow \
-#   python-pynvim \
-#   ranger \
-#   ripgrep \
-#   slurp \
-#   sway \
-#   swaybg \
-#   swayidle \
-#   swaylock \
-#   tree \
-#   ttf-font-awesome \
-#   ttf-jetbrains-mono \
-#   ttf-jetbrains-mono-nerd \
-#   ttf-nerd-fonts-symbols \
-#   ttf-nerd-fonts-symbols-mono \
-#   unzip \
-#   waybar \
-#   wezterm \
-#   wget \
-#   wofi \
-#   xplr \
-#   xorg-xwayland \
-#   zig
-# sudo pacman -Sqcc --noconfirm
+sudo pacman -Syuq --noconfirm
+
+sudo pacman -Sq --noconfirm --needed \
+  base-devel \
+  curl \
+  difftastic \
+  eza \
+  fd \
+  git \
+  git-lfs \
+  hexyl \
+  lazygit \
+  luarocks \
+  meld \
+  neovim \
+  noto-fonts \
+  noto-fonts-cjk \
+  noto-fonts-extra \
+  python3 \
+  pyenv \
+  ripgrep \
+  net-tools \
+  tree \
+  ttf-font-awesome \
+  ttf-jetbrains-mono \
+  ttf-jetbrains-mono-nerd \
+  ttf-nerd-fonts-symbols \
+  ttf-nerd-fonts-symbols-mono \
+  unzip \
+  vim \
+  wezterm \
+  wget \
+  yazi \
+  zathura \
+  zsh
+
+sudo pacman -Sqcc --noconfirm
 
 # If `paru` is not installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
@@ -84,16 +73,9 @@ echo "++ Installing dotfiles ++ "
 echo "############################################"
 
 declare -a resources=(
-  # "config/gtk-3.0"
-  # "config/fontconfig"
-  "config/neovide"
   "config/nvim"
-  "config/ranger"
-  # "config/sway"
-  # "config/systemd"
-  # "config/waybar"
   "config/wezterm"
-  # "config/wofi"
+  "config/yazi"
   "config/zsh"
   "gitconfig"
   "p10k.zsh"

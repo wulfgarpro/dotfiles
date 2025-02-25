@@ -4,3 +4,9 @@
 
 -- jk to escape insert mode
 vim.keymap.set("i", "jk", "<ESC>")
+
+local wk = require("which-key")
+wk.add({
+  { "<leader>t", group = "toggle" },
+  { "<leader>tm", "<cmd>Markview toggle<CR>", mode = "n", desc = "Toggle Markview" },
+})

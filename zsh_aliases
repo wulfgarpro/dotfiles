@@ -21,6 +21,7 @@ alias ls="eza --color=always --group-directories-first --icons"
 alias tree="eza --tree"
 alias y="yazi"
 alias lart='eza --long --all --sort=modified'
+alias diff="difft"
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

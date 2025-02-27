@@ -77,6 +77,7 @@ echo "############################################"
 declare -a resources=(
   "config/paru"
   "config/nvim"
+  "config/tokyonight.nvim"
   "config/wezterm"
   "config/yazi"
   "config/zsh"

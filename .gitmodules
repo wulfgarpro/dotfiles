@@ -8,5 +8,5 @@
 	path = config/zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 [submodule "tokyonight.nvim"]
-	path = tokyonight.nvim
+	path = config/tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim.git

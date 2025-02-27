@@ -45,6 +45,7 @@ alias h="hexyl "
 alias tree="eza --tree --icons"
 alias y="yazi"
 alias diff="difft"
+alias top="htop"
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

@@ -17,13 +17,14 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 read -n 1 -s -r -p "Press any key to continue..."
 echo
 
-git submodule update --init
-
 echo -e "\n"
 echo "############################################"
 echo "++ Installing base and cloning submodules ++"
 echo "############################################"
 
+git submodule update --init
+
+# Update `pacman` database and upgrade packages.
 sudo pacman -Syuq --noconfirm
 
 sudo pacman -Sq --noconfirm --needed \
@@ -42,6 +43,7 @@ sudo pacman -Sq --noconfirm --needed \
   noto-fonts \
   noto-fonts-cjk \
   noto-fonts-extra \
+  oculante \
   python3 \
   pyenv \
   ripgrep \
@@ -60,12 +62,12 @@ sudo pacman -Sq --noconfirm --needed \
   zathura \
   zsh
 
+# Cleanup `pacman` cache.
 sudo pacman -Sqcc --noconfirm
 
-# If `paru` is not installed, install from AUR:
+# If `paru` is _not_ installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
 # paru -Sq --noconfirm --needed \
-#   light
 # paru -Sqcc --noconfirm
 
 echo "############################################"
@@ -100,4 +102,5 @@ done
 # systemctl --user daemon-reload
 # systemctl --user enable --now set-bing-wallpaper.timer
 
+# Relaunch `zsh`.
 exec zsh

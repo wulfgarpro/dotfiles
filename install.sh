@@ -75,6 +75,7 @@ echo "++ Installing dotfiles ++ "
 echo "############################################"
 
 declare -a resources=(
+  "config/paru"
   "config/nvim"
   "config/wezterm"
   "config/yazi"

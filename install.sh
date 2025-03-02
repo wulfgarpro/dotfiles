@@ -32,22 +32,31 @@ sudo pacman -Sq --noconfirm --needed \
   curl \
   difftastic \
   eza \
+  fastfetch \
   fd \
   git \
   git-lfs \
+  grim \
   hexyl \
   lazygit \
   luarocks \
   meld \
   neovim \
+  net-tools \
   noto-fonts \
   noto-fonts-cjk \
   noto-fonts-extra \
   oculante \
+  polkit \
   python3 \
   pyenv \
   ripgrep \
-  net-tools \
+  slurp \
+  sway \
+  swaybg \
+  swayidle \
+  swaylock \
+  tmux \
   tree \
   ttf-font-awesome \
   ttf-jetbrains-mono \
@@ -56,8 +65,12 @@ sudo pacman -Sq --noconfirm --needed \
   ttf-nerd-fonts-symbols-mono \
   unzip \
   vim \
+  waybar \
   wezterm \
   wget \
+  wofi \
+  xorg-xwayland \
+  xdg-desktop-portal-wlr \
   yazi \
   zathura \
   zsh
@@ -67,20 +80,26 @@ sudo pacman -Sqcc --noconfirm
 
 # If `paru` is _not_ installed, install from AUR:
 # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-# paru -Sq --noconfirm --needed \
-# paru -Sqcc --noconfirm
+paru -Sq --noconfirm --needed \
+  google-chrome
+paru -Sqcc --noconfirm
 
 echo "############################################"
 echo "++ Installing dotfiles ++ "
 echo "############################################"
 
 declare -a resources=(
+  "config/aerc"
+  "config/eza"
   "config/paru"
   "config/nvim"
+  "config/sway"
   "config/tmux"
-  "config/tokyonight.nvim"
+  "config/waybar"
   "config/wezterm"
+  "config/wofi"
   "config/yazi"
+  "config/zathura"
   "config/zsh"
   "gitconfig"
   "p10k.zsh"

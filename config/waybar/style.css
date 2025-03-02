@@ -15,6 +15,11 @@ window#waybar {
   background-color: #24283b;
 }
 
+#window {
+  color: #c0caf5;
+  background-color: #24283b;
+}
+
 #scratchpad {
   color: #c0caf5;
   margin-left: 15px;

@@ -1,8 +1,8 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: monospace;
-  font-size: 13pt;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 11pt;
 }
 
 window#waybar {
@@ -38,17 +38,16 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background-color: #7aa2f7;
+  background-color: #3b4261;
   color: #c0caf5;
 }
 
 #workspaces button:hover {
-  background: #7dcfff;
-  color: #24283b;
   box-shadow: none;
   text-shadow: none;
 }
 
+#cpu, #memory, #disk,
 #network,
 #pulseaudio,
 #battery,
@@ -57,6 +56,21 @@ window#waybar {
   background-color: #24283b;
   color: #c0caf5;
   padding: 0px 15px;
+}
+
+/* Hover Effect */
+#battery:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#pulseaudio:hover,
+#workspaces button:hover,
+#tray:hover {
+    background: #3b4261; /* Tokonight hover background */
+    color: #c0caf5; /* Keep the same font color */
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
 }
 
 #battery.charging {

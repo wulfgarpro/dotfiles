@@ -16,7 +16,8 @@
   },
   "clock": {
     "interval": 60,
-    "format": "{:%I:%M %p - %a, %d %b %Y  |}"
+    "format": " {:%I:%M %p |   %a, %d %b %Y}",
+    "tooltip": false
   },
   "battery": {
     "interval": 1,
@@ -24,8 +25,9 @@
       "warning": 30,
       "critical": 15
     },
-    "format-discharging": "{icon} {capacity}%",
-    "format": " {capacity}%",
+    "format-discharging": "  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": "  {capacity}%",
     "format-icons": [
       " ",
       " ",
@@ -35,42 +37,40 @@
     ]
   },
   "cpu": {
-    "format": "{usage}% <span color=\"#7aa2f7\"></span>",
-    "interval": 4
+    "format": " {usage}% ",
+    "interval": 4,
+    "on-click": "wezterm start --btop --tty"
   },
   "memory": {
-    "format": "{used}GiB <span color=\"#7aa2f7\"></span>",
+    "format": " {used}GiB ",
     "interval": 4
   },
   "disk": {
-    "format": "{percentage_used:2}% <span color=\"#7aa2f7\"></span>",
+    "format": " {percentage_used:2}% ",
     "path": "/",
     "interval": 4
   },
   "network": {
     "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-disconnected": "⚠ Disconnected"
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip": true
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": " Muted",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "󰂑",
-      "headset": "󰂑",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip": true
   },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 17,
     "spacing": 10
   }
 }

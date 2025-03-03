@@ -40,11 +40,13 @@ sudo pacman -Sq --noconfirm --needed \
   hexyl \
   lazygit \
   luarocks \
+  mako \
   meld \
   neovim \
   net-tools \
   noto-fonts \
   noto-fonts-cjk \
+  noto-fonts-emoji \
   noto-fonts-extra \
   oculante \
   polkit \

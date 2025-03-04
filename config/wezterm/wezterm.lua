@@ -70,6 +70,9 @@ config.command_palette_font_size = 11.0
 config.command_palette_bg_color = "#24283b"
 config.command_palette_fg_color = "#c0caf5"
 
+-- https://github.com/wezterm/wezterm/discussions/5322
+config.enable_wayland = false
+
 if wezterm.target_triple:find("windows") then
 	-- Windows specific configs go here.
 end

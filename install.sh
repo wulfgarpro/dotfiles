@@ -28,6 +28,7 @@ git submodule update --init
 sudo pacman -Syuq --noconfirm
 
 sudo pacman -Sq --noconfirm --needed \
+  autotiling \
   base-devel \
   curl \
   difftastic \

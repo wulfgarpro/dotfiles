@@ -5,7 +5,8 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
-# exec mako
+exec autotiling
+exec mako
 exec nm-applet
 
 ### Variables

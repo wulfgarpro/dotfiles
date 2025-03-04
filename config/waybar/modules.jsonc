@@ -110,5 +110,9 @@
       "locked": " ",
       "unlocked": " "
     }
+  },
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 50
   }
 }

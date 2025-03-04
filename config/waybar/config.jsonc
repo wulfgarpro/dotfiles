@@ -24,7 +24,8 @@
       "network#home",
       "network#vpn",
       "battery",
-      "pulseaudio",
+      "pulseaudio#output",
+      "pulseaudio#input",
       "clock",
       // "keyboard-state",
       "tray"

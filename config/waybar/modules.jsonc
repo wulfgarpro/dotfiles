@@ -16,7 +16,7 @@
   },
   "clock": {
     "interval": 60,
-    "format": " {:%I:%M %p |   %a, %d %b %Y}",
+    "format": " {:%I:%M %p |  %a, %d %b %Y}",
     "tooltip": false,
     "on-click": "gnome-calendar"
   },
@@ -26,9 +26,9 @@
       "warning": 30,
       "critical": 15
     },
-    "format-discharging": "  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-full": "  {capacity}%",
+    "format-discharging": " {capacity}%",
+    "format-charging": "{capacity}%",
+    "format-full": "{capacity}%",
     "format-icons": [
       " ",
       " ",
@@ -38,62 +38,65 @@
     ]
   },
   "cpu": {
-    "format": " {usage}% ",
+    "format": "{usage}% ",
     "interval": 4
   },
   "memory": {
-    "format": " {used}GiB ",
+    "format": "{used}GiB ",
     "interval": 4
   },
   "disk": {
-    "format": "󰋊 {percentage_used:2}% ",
+    "format": "󰋊{percentage_used:2}% ",
     "path": "/",
     "interval": 4
   },
   "network#home": {
     "interface": "en*",
     "family": "ipv4",
-    "format-wifi": "  {ifname}: {essid} ({signalStrength}%)",
-    "format-ethernet": "  {ifname}: {ipaddr}",
+    "format-wifi": " {ifname}: {essid} ({signalStrength}%)",
+    "format-ethernet": " {ifname}: {ipaddr}",
     "format-disconnected": "⚠ Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "network#vpn": {
     "interface": "tun0",
-    "format-ethernet": "  {ifname}: {ipaddr}",
+    "format-ethernet": " {ifname}: {ipaddr}",
     "format-disconnected": "⚠ Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
-  // "pulseaudio": {
-  //   "format": "{icon} {volume}%",
-  //   "format-muted": " Muted",
-  //   "format-icons": {
-  //     "default": [
-  //       "",
-  //       "",
-  //       " "
-  //     ]
-  //   },
-  //   "on-click": "pavucontrol",
-  //   "tooltip": true
-  // },
-  "pulseaudio": {
+  "pulseaudio#input": {
+    "format-source": " {volume}%",
+    "format-source-muted": " Off",
+    "format": "{format_source}",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "max-volume": 100,
+    "on-click": "pavucontrol",
+    "tooltip": false,
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+ -l 1",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  },
+  "pulseaudio#output": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟 ",
+    "format-muted": "󰝟 Off",
     "format-icons": {
-      "headphone": " ",
-      "headset": " ",
       "default": [
-        " ",
+        "",
+        "",
         " "
       ]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
     "max-volume": 100,
-    "use-default-sink": true
+    "smooth-scrolling-threshold": 1,
+    "on-click": "pavucontrol",
+    "tooltip": false,
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
   "tray": {
     "icon-size": 17,
@@ -102,10 +105,10 @@
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
-    "format": "{name} {icon}",
+    "format": "{icon} {name}",
     "format-icons": {
-      "locked": "",
-      "unlocked": ""
+      "locked": " ",
+      "unlocked": " "
     }
   }
 }

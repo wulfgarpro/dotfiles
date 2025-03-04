@@ -4,8 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango:monospace 11
-
 ### Autostart
 # exec mako
 exec nm-applet
@@ -218,10 +216,10 @@ bindsym $mod+r mode "resize"
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    bindsym --locked XF86AudioMute exec wpctl set-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec wpctl set-volume \@DEFAULT_SINK@ 5%- -l 1
+    bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume \@DEFAULT_SINK@ 5%+ -l 1
+    bindsym --locked XF86AudioMicMute exec wpctl set-mute \@DEFAULT_SOURCE@ toggle
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+

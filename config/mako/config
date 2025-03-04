@@ -2,4 +2,4 @@ sort=-time
 layer=overlay
 default-timeout=5000
 ignore-timeout=1
-font=sans-serif 11
+font=monospace 11

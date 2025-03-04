@@ -72,6 +72,7 @@ sudo pacman -Sq --noconfirm --needed \
   wget \
   wofi \
   xorg-xwayland \
+  xdg-desktop-portal-gtk \
   xdg-desktop-portal-wlr \
   yazi \
   zathura \
@@ -94,6 +95,7 @@ declare -a resources=(
   "config/aerc"
   "config/eza"
   "config/paru"
+  "config/mako"
   "config/nvim"
   "config/sway"
   "config/tmux"

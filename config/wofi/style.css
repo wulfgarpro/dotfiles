@@ -3,8 +3,9 @@ window {
   border: 2px solid #414868;
   border-radius: 5px;
   background-color: #24283b;
-  font-family: "Noto Sans", sans-serif;
+  font-family: monospace;
   font-size: 11pt;
+  font-weight: 400;
 }
 
 #input {

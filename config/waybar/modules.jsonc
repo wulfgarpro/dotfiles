@@ -17,7 +17,8 @@
   "clock": {
     "interval": 60,
     "format": " {:%I:%M %p |   %a, %d %b %Y}",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "gnome-calendar"
   },
   "battery": {
     "interval": 1,
@@ -37,40 +38,74 @@
     ]
   },
   "cpu": {
-    "format": " {usage}% ",
-    "interval": 4,
-    "on-click": "wezterm start --btop --tty"
+    "format": " {usage}% ",
+    "interval": 4
   },
   "memory": {
-    "format": " {used}GiB ",
+    "format": " {used}GiB ",
     "interval": 4
   },
   "disk": {
-    "format": " {percentage_used:2}% ",
+    "format": "󰋊 {percentage_used:2}% ",
     "path": "/",
     "interval": 4
   },
-  "network": {
-    "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-ethernet": "  {ipaddr}",
+  "network#home": {
+    "interface": "en*",
+    "family": "ipv4",
+    "format-wifi": "  {ifname}: {essid} ({signalStrength}%)",
+    "format-ethernet": "  {ifname}: {ipaddr}",
     "format-disconnected": "⚠ Disconnected",
-    "tooltip": true
+    "on-click": "nm-connection-editor",
+    "tooltip": false
   },
+  "network#vpn": {
+    "interface": "tun0",
+    "format-ethernet": "  {ifname}: {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
+    "on-click": "nm-connection-editor",
+    "tooltip": false
+  },
+  // "pulseaudio": {
+  //   "format": "{icon} {volume}%",
+  //   "format-muted": " Muted",
+  //   "format-icons": {
+  //     "default": [
+  //       "",
+  //       "",
+  //       " "
+  //     ]
+  //   },
+  //   "on-click": "pavucontrol",
+  //   "tooltip": true
+  // },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": " Muted",
+    "format-muted": "󰝟 ",
     "format-icons": {
+      "headphone": " ",
+      "headset": " ",
       "default": [
-        "",
-        "",
-        ""
+        " ",
+        " "
       ]
     },
+    "scroll-step": 1,
     "on-click": "pavucontrol",
-    "tooltip": true
+    "max-volume": 100,
+    "use-default-sink": true
   },
   "tray": {
     "icon-size": 17,
     "spacing": 10
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
   }
 }

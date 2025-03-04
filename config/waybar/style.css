@@ -1,8 +1,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: monospace;
   font-size: 11pt;
+  font-weight: 400;
 }
 
 window#waybar {
@@ -71,6 +72,14 @@ window#waybar {
     color: #c0caf5; /* Keep the same font color */
     border-radius: 5px;
     transition: background 0.2s ease-in-out;
+}
+
+tooltip {
+  background: #3b4261; /* Tokonight hover background */
+  color: #c0caf5; /* Keep the same font color */
+   border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #444;
 }
 
 #battery.charging {

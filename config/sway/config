@@ -4,8 +4,11 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+font pango:monospace 11
+
 ### Autostart
 # exec mako
+exec nm-applet
 
 ### Variables
 #
@@ -20,12 +23,14 @@ set $right l
 set $term wezterm
 # Your preferred application launcher
 set $menu wofi --hide-scroll | xargs swaymsg exec --
+# Wallpaper for `output` and `swaylock-wrapper.sh`.
+set $wallpaper ~/Pictures/Wallpapers/8qtbfehp9rle1.png
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Pictures/Wallpapers/1345264.png fill
+output * bg $wallpaper fill
 #
 # Example configuration:
 #
@@ -46,10 +51,10 @@ output * bg ~/Pictures/Wallpapers/1345264.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 300 '~/.config/sway/swaylock-wrapper.sh' \
+  timeout 300 '~/.config/sway/swaylock-wrapper.sh $wallpaper' \
   timeout 600 'if ! systemd-detect-virt -q; then systemctl suspend; fi' \
   resume 'swaymsg "output * dpms on"' \
-  before-sleep '~/.config/sway/swaylock-wrapper.sh'
+  before-sleep '~/.config/sway/swaylock-wrapper.sh $wallpaper'
 
 ### Input configuration
 #
@@ -92,7 +97,7 @@ exec swayidle -w \
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lock the screen
-    bindsym $mod+Shift+Ctrl+l exec ~/.config/sway/swaylock-wrapper.sh
+    bindsym $mod+Shift+Ctrl+l exec ~/.config/sway/swaylock-wrapper.sh $wallpaper
 
     # Suspend the computer
     bindsym $mod+Shift+Ctrl+s exec systemctl suspend
@@ -221,7 +226,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+    bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 
 #
 # Status Bar:

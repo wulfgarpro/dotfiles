@@ -18,13 +18,15 @@
       "sway/window"
     ],
     "modules-right": [
-      "cpu",
-      "memory",
-      "disk",
-      "network",
+      // "cpu",
+      // "memory",
+      // "disk",
+      "network#home",
+      "network#vpn",
       "battery",
       "pulseaudio",
       "clock",
+      // "keyboard-state",
       "tray"
     ],
     "include": [

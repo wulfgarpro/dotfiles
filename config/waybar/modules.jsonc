@@ -81,12 +81,11 @@
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟 Off",
+    "format-muted": "󰝟Off",
     "format-icons": {
       "default": [
-        "",
         "",
-        " "
+        ""
       ]
     },
     "scroll-step": 1,
@@ -96,7 +95,8 @@
     "tooltip": false,
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "python ~/.config/waybar/scripts/audio_changer.py"
   },
   "tray": {
     "icon-size": 17,

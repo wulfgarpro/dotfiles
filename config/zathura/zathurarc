@@ -1,1 +1,2 @@
 include tokyonight_storm.zathurarc
+set selection-clipboard clipboard

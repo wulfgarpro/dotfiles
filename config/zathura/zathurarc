@@ -1,2 +1,5 @@
 include tokyonight_storm.zathurarc
+
 set selection-clipboard clipboard
+
+set font "sans-serif 11"

@@ -27,7 +27,7 @@ set $term wezterm
 # Your preferred application launcher
 set $menu wofi --hide-scroll | xargs swaymsg exec --
 # Wallpaper for `output` and `swaylock-wrapper.sh`.
-set $wallpaper wallpaper.png
+set $wallpaper ~/.config/sway/wallpaper.png
 
 ### Output configuration
 #

@@ -51,18 +51,18 @@
     "interval": 4
   },
   "network#home": {
-    "interface": "en*",
+    "interface": "wlo*",
     "family": "ipv4",
     "format-wifi": "{ifname}: {essid} ({signalStrength}%)",
     "format-ethernet": "{ifname}: {ipaddr}",
-    "format-disconnected": "⚠Disconnected",
+    "format-disconnected": " Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "network#vpn": {
     "interface": "tun0",
     "format-ethernet": "{ifname}: {ipaddr}",
-    "format-disconnected": "⚠Disconnected",
+    "format-disconnected": " Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },

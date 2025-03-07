@@ -100,9 +100,10 @@ echo "############################################"
 declare -a resources=(
   "config/aerc"
   "config/eza"
-  "config/paru"
+  "config/fontconfig"
   "config/mako"
   "config/nvim"
+  "config/paru"
   "config/sway"
   "config/systemd"
   "config/tmux"
@@ -135,6 +136,9 @@ done
 systemctl --user daemon-reload
 # systemctl --user enable --now set-bing-wallpaper.timer
 systemctl --user enable --now inhibit-suspend-on-ssh.service
+
+# Rebuild font cache
+fc-cache -fv
 
 # Relaunch `zsh`.
 exec zsh

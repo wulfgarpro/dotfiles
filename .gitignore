@@ -1,3 +1,4 @@
 config/systemd/user/timers.target.wants
+config/systemd/user/default.target.wants
 config/nvim/lazyvim.json
 config/nvim/lazy-lock.json

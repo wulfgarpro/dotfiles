@@ -2,4 +2,4 @@
 Description=Set Bing Wallpaper
 
 [Service]
-ExecStart=/home/pwent/.config/sway/set-bing-wallpaper.sh
+ExecStart=%h/.config/sway/set-bing-wallpaper.sh

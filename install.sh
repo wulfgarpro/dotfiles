@@ -30,6 +30,8 @@ sudo pacman -Syuq --noconfirm
 sudo pacman -Sq --noconfirm --needed \
   autotiling \
   base-devel \
+  bluez \
+  bluez-utils \
   curl \
   difftastic \
   eza \
@@ -45,6 +47,9 @@ sudo pacman -Sq --noconfirm --needed \
   meld \
   neovim \
   net-tools \
+  network-manager-applet \
+  networkmanager-openvpn \
+  nm-connection-editor \
   noto-fonts \
   noto-fonts-cjk \
   noto-fonts-emoji \
@@ -99,6 +104,7 @@ declare -a resources=(
   "config/mako"
   "config/nvim"
   "config/sway"
+  "config/systemd"
   "config/tmux"
   "config/waybar"
   "config/wezterm"
@@ -125,9 +131,10 @@ for i in "${resources[@]}"; do
   ln -sfT "$SCRIPT_DIR/$i" "${HOME}/.$i"
 done
 
-# Reload and enable the `set-bing-wallpaper` systemd timer.
-# systemctl --user daemon-reload
+# Reload and enable the systemd services for user
+systemctl --user daemon-reload
 # systemctl --user enable --now set-bing-wallpaper.timer
+systemctl --user enable --now inhibit-suspend-on-ssh.service
 
 # Relaunch `zsh`.
 exec zsh

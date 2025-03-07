@@ -16,7 +16,7 @@
   },
   "clock": {
     "interval": 60,
-    "format": " {:%I:%M %p |  %a, %d %b %Y}",
+    "format": "{:%I:%M %p | %a, %d %b %Y}",
     "tooltip": false,
     "on-click": "gnome-calendar"
   },
@@ -26,15 +26,15 @@
       "warning": 30,
       "critical": 15
     },
-    "format-discharging": " {capacity}%",
+    "format-discharging": "{capacity}%",
     "format-charging": "{capacity}%",
     "format-full": "{capacity}%",
     "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
   "cpu": {
@@ -53,21 +53,21 @@
   "network#home": {
     "interface": "en*",
     "family": "ipv4",
-    "format-wifi": " {ifname}: {essid} ({signalStrength}%)",
-    "format-ethernet": " {ifname}: {ipaddr}",
-    "format-disconnected": "⚠ Disconnected",
+    "format-wifi": "{ifname}: {essid} ({signalStrength}%)",
+    "format-ethernet": "{ifname}: {ipaddr}",
+    "format-disconnected": "⚠Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "network#vpn": {
     "interface": "tun0",
-    "format-ethernet": " {ifname}: {ipaddr}",
-    "format-disconnected": "⚠ Disconnected",
+    "format-ethernet": "{ifname}: {ipaddr}",
+    "format-disconnected": "⚠Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "pulseaudio#input": {
-    "format-source": " {volume}%",
+    "format-source": "{volume}%",
     "format-source-muted": " Off",
     "format": "{format_source}",
     "scroll-step": 1,
@@ -101,15 +101,6 @@
   "tray": {
     "icon-size": 17,
     "spacing": 10
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{icon} {name}",
-    "format-icons": {
-      "locked": " ",
-      "unlocked": " "
-    }
   },
   "sway/window": {
     "format": "{title}",

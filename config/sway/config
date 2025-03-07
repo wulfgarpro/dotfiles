@@ -27,7 +27,7 @@ set $term wezterm
 # Your preferred application launcher
 set $menu wofi --hide-scroll | xargs swaymsg exec --
 # Wallpaper for `output` and `swaylock-wrapper.sh`.
-set $wallpaper ~/Pictures/Wallpapers/wide_tokyonight_skyline.jpg
+set $wallpaper wallpaper.png
 
 ### Output configuration
 #
@@ -54,10 +54,10 @@ output * bg $wallpaper fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 300 '~/.config/sway/swaylock-wrapper.sh $wallpaper' \
-  timeout 600 'if ! systemd-detect-virt -q; then systemctl suspend; fi' \
+  timeout 900 '~/.config/sway/scripts/swaylock-wrapper.sh $wallpaper' \
+  timeout 1800 'if ! systemd-detect-virt -q; then systemctl suspend; fi' \
   resume 'swaymsg "output * dpms on"' \
-  before-sleep '~/.config/sway/swaylock-wrapper.sh $wallpaper'
+  before-sleep '~/.config/sway/scripts/swaylock-wrapper.sh $wallpaper'
 
 ### Input configuration
 #
@@ -100,7 +100,7 @@ exec swayidle -w \
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lock the screen
-    bindsym $mod+Shift+Ctrl+l exec ~/.config/sway/swaylock-wrapper.sh $wallpaper
+    bindsym $mod+Shift+Ctrl+l exec ~/.config/sway/scripts/swaylock-wrapper.sh $wallpaper
 
     # Suspend the computer
     bindsym $mod+Shift+Ctrl+s exec systemctl suspend

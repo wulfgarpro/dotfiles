@@ -16,25 +16,25 @@
   },
   "clock": {
     "interval": 60,
-    "format": "{:%I:%M %p | %a, %d %b %Y}",
+    "format": " {:%I:%M %p |  %a, %d %b %Y}",
     "tooltip": false,
     "on-click": "gnome-calendar"
   },
   "battery": {
     "interval": 1,
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 15,
+      "critical": 5
     },
-    "format-discharging": "{capacity}%",
-    "format-charging": "{capacity}%",
-    "format-full": "{capacity}%",
+    "format-discharging": "  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": " {capacity}%",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
     ]
   },
   "cpu": {
@@ -53,22 +53,22 @@
   "network#home": {
     "interface": "wlo*",
     "family": "ipv4",
-    "format-wifi": "{ifname}: {essid} ({signalStrength}%)",
-    "format-ethernet": "{ifname}: {ipaddr}",
-    "format-disconnected": " Disconnected",
+    "format-wifi": " 󰤨  {ifname}: {essid} {ipaddr} ({signalStrength}%)",
+    "format-ethernet": " {ifname}: {ipaddr}",
+    "format-disconnected": "{ifname}: Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "network#vpn": {
     "interface": "tun0",
-    "format-ethernet": "{ifname}: {ipaddr}",
-    "format-disconnected": " Disconnected",
+    "format-ethernet": "  {ifname}: {ipaddr} ",
+    "format-disconnected": "{ifname}: Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "pulseaudio#input": {
-    "format-source": "{volume}%",
-    "format-source-muted": " Off",
+    "format-source": " {volume}%",
+    "format-source-muted": "  Off",
     "format": "{format_source}",
     "scroll-step": 1,
     "smooth-scrolling-threshold": 1,
@@ -81,11 +81,11 @@
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟Off",
+    "format-muted": "󰝟 Off",
     "format-icons": {
       "default": [
         "",
-        ""
+        " "
       ]
     },
     "scroll-step": 1,
@@ -99,7 +99,7 @@
     "on-click-right": "python ~/.config/waybar/scripts/audio_changer.py"
   },
   "tray": {
-    "icon-size": 17,
+    "icon-size": 18,
     "spacing": 10
   },
   "sway/window": {

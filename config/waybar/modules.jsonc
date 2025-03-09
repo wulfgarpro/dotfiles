@@ -26,16 +26,17 @@
       "warning": 15,
       "critical": 5
     },
-    "format-discharging": "  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-full": " {capacity}%",
+    "format-discharging": "   {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-full": "  {capacity}%",
     "format-icons": [
       " ",
       " ",
       " ",
       " ",
       " "
-    ]
+    ],
+    "tooltip": false
   },
   "cpu": {
     "format": "{usage}% ",
@@ -51,24 +52,21 @@
     "interval": 4
   },
   "network#home": {
-    "interface": "wlo*",
-    "family": "ipv4",
-    "format-wifi": " 󰤨  {ifname}: {essid} {ipaddr} ({signalStrength}%)",
-    "format-ethernet": " {ifname}: {ipaddr}",
-    "format-disconnected": "{ifname}: Disconnected",
+    "format-wifi": " 󰤨   {essid} ({signalStrength}%)",
+    "format-disconnected": "󰤨  Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "network#vpn": {
     "interface": "tun0",
-    "format-ethernet": "  {ifname}: {ipaddr} ",
-    "format-disconnected": "{ifname}: Disconnected",
+    "format-ethernet": "  {ipaddr} ",
+    "format-disconnected": "  Disconnected",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
   "pulseaudio#input": {
-    "format-source": " {volume}%",
-    "format-source-muted": "  Off",
+    "format-source": "  {volume}%",
+    "format-source-muted": "   Off",
     "format": "{format_source}",
     "scroll-step": 1,
     "smooth-scrolling-threshold": 1,
@@ -80,8 +78,8 @@
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
   },
   "pulseaudio#output": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 Off",
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟  Off",
     "format-icons": {
       "default": [
         "",
@@ -100,10 +98,17 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 10
+    "spacing": 10,
+    "tooltip": false
   },
   "sway/window": {
     "format": "{title}",
     "max-length": 50
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " {percent}%",
+    "on-scroll-up": "brightnessctl s 5%+",
+    "on-scroll-down": "brightnessctl s 5%-"
   }
 }

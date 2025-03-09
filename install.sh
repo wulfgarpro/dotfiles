@@ -32,6 +32,7 @@ sudo pacman -Sq --noconfirm --needed \
   base-devel \
   bluez \
   bluez-utils \
+  brightnessctl \
   curl \
   difftastic \
   eza \

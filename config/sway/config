@@ -262,7 +262,7 @@ bar {
     for_window [app_id="com.hex-rays.ida" title="About"] floating enable
 
     # Put gaps between windows.
-    gaps inner 10
-    gaps outer 10
+    # gaps inner 10
+    # gaps outer 10
 
 include /etc/sway/config.d/*

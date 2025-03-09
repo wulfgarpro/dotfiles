@@ -9,6 +9,7 @@
     "margin-left": 0,
     "margin-right": 0,
     "margin-top": 0,
+    "fixed-center": false,
     "modules-left": [
       "sway/workspaces",
       "sway/scratchpad",
@@ -23,9 +24,10 @@
       // "disk",
       "network#home",
       "network#vpn",
-      "battery",
       "pulseaudio#output",
       "pulseaudio#input",
+      "backlight",
+      "battery",
       "clock",
       // "keyboard-state",
       "tray"

@@ -84,6 +84,7 @@ sudo pacman -Sq --noconfirm --needed \
   xdg-desktop-portal-wlr \
   yazi \
   zathura \
+  zathura-pdf-mupdf \
   zsh
 
 # Cleanup `pacman` cache.

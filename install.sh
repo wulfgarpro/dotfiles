@@ -66,6 +66,7 @@ sudo pacman -Sq --noconfirm --needed \
   swayidle \
   swaylock \
   tmux \
+  trash-cli \
   tree \
   ttf-font-awesome \
   ttf-jetbrains-mono \

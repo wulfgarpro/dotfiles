@@ -52,6 +52,7 @@
     "interval": 4
   },
   "network#home": {
+    "interface": "en*",
     "format-ethernet": "   {ipaddr} ",
     "format-wifi": " 󰤨   {essid} ({signalStrength}%)",
     "format-disconnected": "󰤨  Disconnected",

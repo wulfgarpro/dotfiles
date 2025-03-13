@@ -9,6 +9,7 @@
 window#waybar {
   background-color: #24283b;
   color: white;
+
 }
 
 #workspaces {
@@ -69,20 +70,21 @@ window#waybar {
 #backlight:hover,
 #pulseaudio:hover,
 #clock:hover,
-#workspaces button:hover,
-#tray:hover {
+#workspaces button:hover {
     background: #3b4261; /* Tokonight hover background */
     color: #c0caf5; /* Keep the same font color */
-    border-radius: 5px;
+    border-radius: 0px;
     transition: background 0.2s ease-in-out;
 }
 
-tooltip {
-  background: #3b4261; /* Tokonight hover background */
+tooltip * {
+  /* background: transparent; */
   color: #c0caf5; /* Keep the same font color */
-   border-radius: 5px;
-    padding: 5px 10px;
-    border: 1px solid #444;
+  font-weight: 500;
+}
+
+tooltip.background {
+  background: rgba(0,0,0,0.8)
 }
 
 #battery.charging {

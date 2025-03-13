@@ -49,6 +49,7 @@ alias top="htop"
 alias tmn="tmux new -s "
 alias tml="tmux list-sessions"
 alias tma="tmux attach "
+alias z="zathura"
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

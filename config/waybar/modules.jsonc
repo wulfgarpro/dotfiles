@@ -16,7 +16,8 @@
   },
   "clock": {
     "interval": 60,
-    "format": " {:%I:%M %p |  %a, %d %b %Y}",
+    // "format": " {:%I:%M %p |  %a, %d %b %Y}",
+    "format": "{:%a, %d/%m %H:%M}",
     "tooltip": false,
     "on-click": "gnome-calendar"
   },

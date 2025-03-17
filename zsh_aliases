@@ -21,6 +21,10 @@ function ls() {
   eza --color=always --icons --group-directories-first "${args[@]}"
 }
 
+z() {
+    nohup zathura "$@" >/dev/null 2>&1 &
+}
+
 # Force `ls` to use `eza`'s completion.
 compdef _eza ls
 
@@ -49,7 +53,6 @@ alias top="htop"
 alias tmn="tmux new -s "
 alias tml="tmux list-sessions"
 alias tma="tmux attach "
-alias z="zathura"
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"

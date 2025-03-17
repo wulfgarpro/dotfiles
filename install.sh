@@ -9,92 +9,105 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Assumptions - an initial Arch Linux install with internet access and a
 # well-defined $PATH.
 
-# if [ "${1-}" == "--help" ]; then
-#   echo "./install"
-#   exit 1
-# fi
+SKIP_INSTALL=false
+
+if [[ "${1-}" == "-ni" ]]; then
+  SKIP_INSTALL=true
+fi
+
+if [[ "${1-}" == "--help" || "${1-}" == "-h" ]]; then
+  echo "./install [OPTIONS]"
+  echo
+  echo "Options:"
+  echo "  -ni         Skip package installation"
+  echo "  -h, --help  Show this help message and exit"
+  exit 0
+fi
 
 read -n 1 -s -r -p "Press any key to continue..."
 echo
 
-echo -e "\n"
-echo "############################################"
-echo "++ Installing base and cloning submodules ++"
-echo "############################################"
-
 git submodule update --init
 
-# Update `pacman` database and upgrade packages.
-sudo pacman -Syuq --noconfirm
+if [[ "$SKIP_INSTALL" == false ]]; then
 
-sudo pacman -Sq --noconfirm --needed \
-  autotiling \
-  base-devel \
-  bluez \
-  bluez-utils \
-  brightnessctl \
-  curl \
-  difftastic \
-  eza \
-  fastfetch \
-  fd \
-  git \
-  git-lfs \
-  grim \
-  hexyl \
-  lazygit \
-  luarocks \
-  mako \
-  meld \
-  neovim \
-  net-tools \
-  network-manager-applet \
-  networkmanager-openvpn \
-  nm-connection-editor \
-  noto-fonts \
-  noto-fonts-cjk \
-  noto-fonts-emoji \
-  noto-fonts-extra \
-  oculante \
-  polkit \
-  python3 \
-  pyenv \
-  ripgrep \
-  slurp \
-  sway \
-  swaybg \
-  swayidle \
-  swaylock \
-  tmux \
-  trash-cli \
-  tree \
-  ttf-font-awesome \
-  ttf-jetbrains-mono \
-  ttf-jetbrains-mono-nerd \
-  ttf-nerd-fonts-symbols \
-  ttf-nerd-fonts-symbols-mono \
-  unzip \
-  vim \
-  waybar \
-  wezterm \
-  wget \
-  wofi \
-  xorg-xwayland \
-  xdg-desktop-portal-gtk \
-  xdg-desktop-portal-wlr \
-  yazi \
-  zathura \
-  zathura-pdf-mupdf \
-  zsh
+  echo -e "\n"
+  echo "############################################"
+  echo "++ Installing base and cloning submodules ++"
+  echo "############################################"
 
-# Cleanup `pacman` cache.
-sudo pacman -Sqcc --noconfirm
+  # Update `pacman` database and upgrade packages.
+  sudo pacman -Syuq --noconfirm
 
-# If `paru` is _not_ installed, install from AUR:
-# `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-paru -Sq --noconfirm --needed \
-  google-chrome
-paru -Sqcc --noconfirm
+  sudo pacman -Sq --noconfirm --needed \
+    autotiling \
+    base-devel \
+    bluez \
+    bluez-utils \
+    brightnessctl \
+    curl \
+    difftastic \
+    eza \
+    fastfetch \
+    fd \
+    git \
+    git-lfs \
+    grim \
+    hexyl \
+    lazygit \
+    luarocks \
+    mako \
+    meld \
+    neovim \
+    net-tools \
+    network-manager-applet \
+    networkmanager-openvpn \
+    nm-connection-editor \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
+    noto-fonts-extra \
+    oculante \
+    polkit \
+    python3 \
+    pyenv \
+    ripgrep \
+    slurp \
+    sway \
+    swaybg \
+    swayidle \
+    swaylock \
+    tmux \
+    trash-cli \
+    tree \
+    ttf-font-awesome \
+    ttf-jetbrains-mono \
+    ttf-jetbrains-mono-nerd \
+    ttf-nerd-fonts-symbols \
+    ttf-nerd-fonts-symbols-mono \
+    unzip \
+    vim \
+    waybar \
+    wezterm \
+    wget \
+    wofi \
+    xorg-xwayland \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-wlr \
+    yazi \
+    zathura \
+    zathura-pdf-mupdf \
+    zsh
+
+  # Cleanup `pacman` cache.
+  sudo pacman -Sqcc --noconfirm
+
+  # If `paru` is _not_ installed, install from AUR:
+  # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
+  paru -Sq --noconfirm --needed \
+    google-chrome
+  paru -Sqcc --noconfirm
+fi
 
 echo "############################################"
 echo "++ Installing dotfiles ++ "

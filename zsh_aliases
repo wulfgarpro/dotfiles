@@ -45,11 +45,11 @@ alias n="nvim"
 alias sudo="sudo " # Space allows `sudo` aliases
 alias readme="glow -p README.md"
 alias h="hexyl "
-# alias ls="eza --color=always --icons --sort=modified \$@"
 alias tree="eza --tree --icons"
 alias y="yazi"
 alias diff="difft"
 alias top="htop"
+### Tmux
 alias tmn="tmux new -s "
 alias tml="tmux list-sessions"
 alias tma="tmux attach "

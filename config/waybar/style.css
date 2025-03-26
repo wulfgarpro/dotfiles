@@ -8,30 +8,29 @@
 
 window#waybar {
   background-color: #24283b;
-  color: white;
-
+  color: #c0caf5; /* Keep the same font color */
 }
 
 #workspaces {
   color: #c0caf5;
-  background-color: #24283b;
+  /* background-color: #24283b; */
 }
 
 #window {
   color: #c0caf5;
-  background-color: #24283b;
+  /* background-color: #24283b; */
 }
 
 #scratchpad {
   color: #c0caf5;
   margin-left: 15px;
-  background-color: #24283b;
+  /* background-color: #24283b; */
 }
 
 #mode {
   color: #c0caf5;
   margin-left: 15px;
-  background-color: #24283b;
+  /* background-color: #24283b; */
 }
 
 #workspaces button {
@@ -40,7 +39,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background-color: #3b4261;
+  /* background-color: #3b4261; */
   color: #c0caf5;
 }
 
@@ -56,7 +55,7 @@ window#waybar {
 #backlight,
 #clock,
 #tray {
-  background-color: #24283b;
+  /* background-color: #24283b; */
   color: #c0caf5;
   padding: 0px 15px;
 }
@@ -70,6 +69,7 @@ window#waybar {
 #backlight:hover,
 #pulseaudio:hover,
 #clock:hover,
+#custom-launcher:hover,
 #workspaces button:hover {
     background: #3b4261; /* Tokonight hover background */
     color: #c0caf5; /* Keep the same font color */

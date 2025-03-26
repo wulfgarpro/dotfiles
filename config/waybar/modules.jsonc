@@ -15,10 +15,12 @@
     "tooltip-format": "{app}: {title}"
   },
   "clock": {
-    "interval": 60,
+    "interval": 1,
     // "format": " {:%I:%M %p |  %a, %d %b %Y}",
-    "format": "{:%a, %d/%m %H:%M}",
+    "format": "󰥔  {:%a, %d/%m  |  %I:%M %p}",
+    // "format": "󰥔  {:%I:%M %p  %A %b %d}",
     "tooltip": false,
+    // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
     "on-click": "gnome-calendar"
   },
   "battery": {
@@ -113,5 +115,11 @@
     "format": " {percent}%",
     "on-scroll-up": "brightnessctl s 5%+",
     "on-scroll-down": "brightnessctl s 5%-"
+  },
+  "custom/launcher": {
+    "format": "      ",
+    "tooltip": false,
+    "on-click": "wofi --show drun",
+    "on-click-right": "killall -9 wofi"
   }
 }

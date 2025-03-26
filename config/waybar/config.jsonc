@@ -9,14 +9,16 @@
     "margin-left": 0,
     "margin-right": 0,
     "margin-top": 0,
-    "fixed-center": false,
+    // "fixed-center": false,
     "modules-left": [
+      "custom/launcher",
       "sway/workspaces",
       "sway/scratchpad",
       "sway/mode"
     ],
     "modules-center": [
-      "sway/window"
+      // "sway/window"
+      "clock"
     ],
     "modules-right": [
       // "cpu",
@@ -28,7 +30,7 @@
       "pulseaudio#input",
       "backlight",
       "battery",
-      "clock",
+      // "clock",
       // "keyboard-state",
       "tray"
     ],

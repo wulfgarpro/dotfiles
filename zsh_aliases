@@ -49,6 +49,7 @@ alias tree="eza --tree --icons"
 alias y="yazi"
 alias diff="difft"
 alias top="htop"
+alias pmc="sudo pacman -Rsnc $(pacman -Qtdq)"
 ### Tmux
 alias tmn="tmux new -s "
 alias tml="tmux list-sessions"

@@ -4,14 +4,14 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-### Misc configurations
+### Misc
 #
 # Autostart
-exec autotiling
-exec mako
-exec nm-applet
+exec_always --no-startup-id autotiling &
+exec_always --no-startup-id mako &
+exec_always --no-startup-id nm-applet --indicator &
 # Font
-font pango:sans-serif 11
+font pango:NotoSans NF medium 11
 
 ### Variables
 #
@@ -104,6 +104,9 @@ exec swayidle -w \
 
     # Suspend the computer
     bindsym $mod+Shift+Ctrl+s exec systemctl suspend
+
+    # Toggle waybar
+    bindsym $mod+o exec killall -SIGUSR1 waybar
 
 #
 # Moving around:
@@ -262,7 +265,15 @@ bar {
     for_window [app_id="com.hex-rays.ida" title="About"] floating enable
 
     # Put gaps between windows.
-    # gaps inner 10
-    # gaps outer 10
+    gaps inner 5
+    gaps outer 0
+
+    # Window colours (TokyoNight Storm style, matching Waybar)
+    client.focused          #3b4261 #3b4261 #c0caf5
+    client.unfocused        #1a1b26 #1a1b26 #565f89
+    client.focused_inactive #1a1b26 #1a1b26 #565f89
+    client.placeholder      #1a1b26 #1a1b26 #565f89
+    client.urgent           #f7768e #f7768e #c0caf5
+    client.background       #24283b
 
 include /etc/sway/config.d/*

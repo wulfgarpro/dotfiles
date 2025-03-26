@@ -2,4 +2,12 @@ sort=-time
 layer=overlay
 default-timeout=5000
 ignore-timeout=1
-font=monospace 11
+font=sans-serif 11
+
+background-color=#1a1b26
+text-color=#c0caf5
+border-color=#3b4261
+progress-color=over #302D41
+
+[urgency=high]
+border-color=#F8BD96

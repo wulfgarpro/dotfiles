@@ -28,6 +28,8 @@ set $term wezterm
 set $menu wofi --hide-scroll | xargs swaymsg exec --
 # Wallpaper for `output` and `swaylock-wrapper.sh`.
 set $wallpaper ~/.config/sway/wallpaper.png
+# Preferred file manager
+set $files yazi
 
 ### Output configuration
 #
@@ -108,6 +110,10 @@ exec swayidle -w \
     # Toggle waybar
     bindsym $mod+o exec killall -SIGUSR1 waybar
 
+    # Switch between workspaces
+    workspace back_and_forth yes
+    bindsym $mod+tab workspace back_and_forth
+
 #
 # Moving around:
 #
@@ -165,8 +171,8 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+b split h
+    bindsym $mod+v split v
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking

@@ -49,7 +49,7 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 ## PATH
-export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$PATH
+export PATH=$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 
 # Init Pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

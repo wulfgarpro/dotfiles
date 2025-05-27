@@ -56,6 +56,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     hexyl \
     lazygit \
     luarocks \
+    lsd \
     mako \
     meld \
     neovim \

@@ -57,8 +57,9 @@ alias tma="tmux attach "
 ### Sway
 alias ti="${XDG_CONFIG_HOME:-$HOME/.config}/sway/toggle-idle.sh"
 alias sbw="set-bing-wallpaper.sh"
+alias ls="lsd"
 
-## Navigation
+# Navigation
 alias code="cd $HOME/code"
 alias work="cd $HOME/code/work"
 alias wk="work"

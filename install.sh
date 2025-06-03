@@ -42,6 +42,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
   sudo pacman -Sq --noconfirm --needed \
     autotiling \
     base-devel \
+    bat \
     bluez \
     bluez-utils \
     brightnessctl \

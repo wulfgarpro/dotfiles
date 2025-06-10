@@ -78,3 +78,5 @@ alias sls="sudo systemctl start openvpn-client@sls.service"
 alias ssls="sudo systemctl stop openvpn-client@sls.service"
 alias dln="sudo wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -O /opt/nvim.appimage && chmod +x /opt/nvim.appimage"
 alias mi="$HOME/code/personal/Vault/Scripts/machine_init.sh "
+
+source ~/.zsh_aliases_private 2>/dev/null

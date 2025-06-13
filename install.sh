@@ -98,7 +98,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     xdg-desktop-portal-wlr \
     yazi \
     zathura \
-    zathura-pdf-mupdf \
+    zathura-pdf-poppler \
     zsh
 
   # Cleanup `pacman` cache.

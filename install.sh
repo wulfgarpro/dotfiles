@@ -117,6 +117,7 @@ echo "############################################"
 
 declare -a resources=(
   "config/aerc"
+  "config/bat"
   "config/eza"
   "config/fontconfig"
   "config/mako"

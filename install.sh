@@ -52,6 +52,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     fastfetch \
     fd \
     git \
+    git-delta \
     git-lfs \
     grim \
     hexyl \
@@ -118,6 +119,7 @@ echo "############################################"
 declare -a resources=(
   "config/aerc"
   "config/bat"
+  "config/delta"
   "config/eza"
   "config/fontconfig"
   "config/mako"

@@ -1,7 +1,9 @@
 [core]
 	editor = nvim
+	pager = delta
 [merge]
 	tool = meld
+	conflictStyle = zdiff3
 [diff]
 	tool = meld
 [difftool]
@@ -17,3 +19,10 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navtigate = true
+  line-numbers = true
+[include]
+  path = ~/.config/delta/tokyonight_storm.gitconfig

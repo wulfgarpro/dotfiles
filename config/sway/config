@@ -10,7 +10,7 @@
 exec_always --no-startup-id autotiling &
 exec_always --no-startup-id mako &
 exec_always --no-startup-id nm-applet --indicator &
-# Font
+# Font (Nerd Font)
 font pango:NotoSans NF medium 11
 
 ### Variables
@@ -29,7 +29,7 @@ set $menu wofi --hide-scroll | xargs swaymsg exec --
 # Wallpaper for `output` and `swaylock-wrapper.sh`.
 set $wallpaper ~/.config/sway/wallpaper.png
 # Preferred file manager
-set $files yazi
+set $files thunar
 
 ### Output configuration
 #

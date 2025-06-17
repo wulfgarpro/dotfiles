@@ -227,6 +227,17 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 #
+# Gaps:
+#
+    # Increase inner gap
+    bindsym $mod+Ctrl+equal gaps inner current plus 5
+    # Decrease inner gap
+    bindsym $mod+Ctrl+minus gaps inner current minus 5
+    # Reset gaps to default
+    bindsym $mod+Ctrl+0 gaps inner all set 10; gaps outer all set 10
+    # Remove all gaps (maximize screen space)
+    bindsym $mod+Ctrl+9 gaps inner all set 0; gaps outer all set 0
+#
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
@@ -272,7 +283,7 @@ bar {
 
     # Put gaps between windows.
     gaps inner 5
-    gaps outer 0
+    gaps outer 5
 
     # Window colours (TokyoNight Storm style, matching Waybar)
     client.focused          #3b4261 #3b4261 #c0caf5

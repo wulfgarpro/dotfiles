@@ -36,6 +36,7 @@ alias gmv="git mv"
 alias gpl="git pull"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias grbc="git rebase --continue"
 alias lg="lazygit"
 alias mdf="meld --diff "
 

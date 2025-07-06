@@ -1,8 +1,8 @@
 return {
-  "zbirenbaum/copilot.lua",
-  opts = {
-    filetypes = {
-      gitcommit = true,
-    },
-  },
+  -- "zbirenbaum/copilot.lua",
+  -- opts = {
+  --   filetypes = {
+  --     gitcommit = true,
+  --   },
+  -- },
 }

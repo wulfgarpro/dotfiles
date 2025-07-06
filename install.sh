@@ -134,6 +134,7 @@ declare -a resources=(
   "config/yazi"
   "config/zathura"
   "config/zsh"
+  "gdbinit"
   "gitconfig"
   "p10k.zsh"
   "zshrc"

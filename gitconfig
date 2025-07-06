@@ -26,3 +26,5 @@
   line-numbers = true
 [include]
   path = ~/.config/delta/tokyonight_storm.gitconfig
+[rerere]
+	enabled = true

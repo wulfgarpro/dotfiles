@@ -69,6 +69,7 @@ config.switch_to_last_active_tab_when_closing_tab = true
 config.command_palette_font_size = 11.0
 config.command_palette_bg_color = "#24283b"
 config.command_palette_fg_color = "#c0caf5"
+config.scrollback_lines = 10000
 
 -- https://github.com/wezterm/wezterm/discussions/5322
 config.enable_wayland = false

@@ -52,6 +52,7 @@ alias cat="bat -p --theme tokyonight_storm"
 alias diff="difft"
 alias top="htop"
 alias pmc="sudo pacman -Rsnc $(pacman -Qtdq)"
+alias ipy="ipython"
 ### Tmux
 alias tmn="tmux new -s "
 alias tml="tmux list-sessions"
@@ -73,6 +74,7 @@ alias dotfiles="cd $HOME/code/personal/dotfiles"
 alias dots="dotfiles"
 alias public="cd $HOME/Public"
 alias pub="public"
+alias ctf="cd $HOME/code/personal/CTF"
 
 ## Other
 alias sls="sudo systemctl start openvpn-client@sls.service"

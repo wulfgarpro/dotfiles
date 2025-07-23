@@ -51,6 +51,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     eza \
     fastfetch \
     fd \
+    file-roller \
     git \
     git-delta \
     git-lfs \
@@ -80,6 +81,9 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     swaybg \
     swayidle \
     swaylock \
+    thunar \
+    thunar-archive-plugin \
+    thunar-volman \
     tmux \
     trash-cli \
     tree \
@@ -88,6 +92,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     ttf-jetbrains-mono-nerd \
     ttf-nerd-fonts-symbols \
     ttf-nerd-fonts-symbols-mono \
+    tumbler \
     unzip \
     vim \
     waybar \

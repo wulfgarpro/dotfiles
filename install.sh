@@ -96,6 +96,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     unzip \
     vim \
     waybar \
+    webp-pixbuf-loader \
     wezterm \
     wget \
     wofi \

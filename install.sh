@@ -77,6 +77,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     pyenv \
     ripgrep \
     slurp \
+    swappy \
     sway \
     swaybg \
     swayidle \

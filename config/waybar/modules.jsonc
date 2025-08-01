@@ -121,5 +121,13 @@
     "tooltip": false,
     "on-click": "wofi --show drun",
     "on-click-right": "killall -9 wofi"
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons": {
+      "locked": "  ",
+      "unlocked": "  "
+    }
   }
 }

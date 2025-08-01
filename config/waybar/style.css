@@ -39,8 +39,9 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  /* background-color: #3b4261; */
   color: #c0caf5;
+  background-color: #3b4261;
+  border-radius: 4px;
 }
 
 #workspaces button:hover {

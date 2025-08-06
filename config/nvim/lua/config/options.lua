@@ -7,5 +7,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
 vim.g.neovide_cursor_trail_size = 0
+vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.opt.colorcolumn = "80"

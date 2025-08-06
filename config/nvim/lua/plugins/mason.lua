@@ -7,6 +7,7 @@ return {
       "bash-language-server",
       "hadolint",
       "selene",
+      "basedpyright",
     },
   },
 }

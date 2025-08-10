@@ -42,7 +42,6 @@ GO_BIN=${HOME}/go/bin
 
 #-Exports
 export EDITOR=nvim
-export PYENV_ROOT="${HOME}/.pyenv"
 ## libvirt's default URI
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 ## Wayland
@@ -51,12 +50,11 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 ## PATH
-export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$PYENV_ROOT:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$PATH
+export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$PATH
 
-# Init Pyenv
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# Enable shell autocompletion for `uv` and `uvx` commands.
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
 
 #-Theme (cont.)
 ## Source p10k; to customize prompt, run `p10k configure` or edit ~/.p10k.zsh

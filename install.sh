@@ -57,7 +57,10 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     git-lfs \
     grim \
     hexyl \
+    hunspell \
+    hunspell-au \
     lazygit \
+    libreoffice-still \
     luarocks \
     lsd \
     mako \

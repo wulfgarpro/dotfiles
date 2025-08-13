@@ -52,6 +52,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     fastfetch \
     fd \
     file-roller \
+    firefox \
     git \
     git-delta \
     git-lfs \

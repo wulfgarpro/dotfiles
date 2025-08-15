@@ -75,6 +75,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     noto-fonts-cjk \
     noto-fonts-emoji \
     noto-fonts-extra \
+    npm \
     oculante \
     polkit \
     python3 \

@@ -59,7 +59,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     grim \
     hexyl \
     hunspell \
-    hunspell-au \
+    hunspell-en_au \
     lazygit \
     libreoffice-still \
     luarocks \
@@ -112,7 +112,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     yazi \
     zathura \
     zathura-pdf-poppler \
-    zsh
+    zsh #hunspell-au \
 
   # Cleanup `pacman` cache.
   sudo pacman -Sqcc --noconfirm

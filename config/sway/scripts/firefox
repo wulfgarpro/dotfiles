@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python "${HOME}/.config/sway/scripts/sway-open.py" --app_id firefox --new-window-argument="--new-window" /usr/lib/firefox/firefox "$@"

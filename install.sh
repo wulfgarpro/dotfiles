@@ -163,7 +163,7 @@ for i in "${resources[@]}"; do
       continue
     fi
   fi
-  ln -sfT "$SCRIPT_DIR/$i" "${HOME}/.$i"
+  ln -sfT "${SCRIPT_DIR}/$i" "${HOME}/.$i"
 done
 
 # Reload and enable the systemd services for user
@@ -173,6 +173,14 @@ systemctl --user enable --now inhibit-suspend-on-ssh.service
 
 # Rebuild font cache
 fc-cache -fv
+
+# Firefox
+APP_DIR="${HOME}/.local/share/applications"
+LOCAL_BIN="${HOME}"/.local/bin
+rm "${APP_DIR}/firefox.desktop" 2>/dev/null
+rm "${LOCAL_BIN}/firefox" 2>/dev/null
+ln -sfT "${SCRIPT_DIR}/.config/sway/scripts/resources/firefox.desktop" "${APP_DIR}/firefox.desktop"
+ln -sfT "${SCRIPT_DIR}/.config/sway/scripts/firefox" "${LOCAL_BIN}/firefox"
 
 # Relaunch `zsh`.
 exec zsh

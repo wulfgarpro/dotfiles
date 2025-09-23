@@ -39,6 +39,7 @@ HOME_BIN=${HOME}/bin
 LOCAL_BIN=${HOME}/.local/bin
 CARGO_BIN=${HOME}/.cargo/bin
 GO_BIN=${HOME}/go/bin
+NDK_HOME=${ANDROID_HOME}/ndk/29.0.13113456
 
 #-Exports
 export EDITOR=nvim
@@ -49,8 +50,10 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     ## Don't reparent Java AWT/Swing apps
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
+## DEBUGINFOD_URLS for GDB/pwndbg
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 ## PATH
-export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$PATH
+export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 
 # Enable shell autocompletion for `uv` and `uvx` commands.
 eval "$(uv generate-shell-completion zsh)"

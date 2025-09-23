@@ -36,6 +36,12 @@ set $files thunar
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg $wallpaper fill
+output HDMI-A-3 {
+    transform 90
+    pos -1080 0
+    scale 1
+}
+
 #
 # Example configuration:
 #

@@ -14,7 +14,10 @@
       "custom/launcher",
       "sway/workspaces",
       "sway/scratchpad",
-      "sway/mode"
+      "sway/mode",
+      "cpu",
+      "memory",
+      "disk"
     ],
     "modules-center": [
       // "sway/window"
@@ -33,6 +36,9 @@
       // "clock",
       "keyboard-state",
       "tray"
+    ],
+    "output": [
+      "DP-3"
     ],
     "include": [
       "~/.config/waybar/modules.jsonc"

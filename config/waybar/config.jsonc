@@ -14,10 +14,10 @@
       "custom/launcher",
       "sway/workspaces",
       "sway/scratchpad",
-      "sway/mode",
-      "cpu",
-      "memory",
-      "disk"
+      "sway/mode"
+      // "cpu",
+      // "memory",
+      // "disk"
     ],
     "modules-center": [
       // "sway/window"

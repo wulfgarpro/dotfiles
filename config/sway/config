@@ -240,7 +240,7 @@ bindsym $mod+r mode "resize"
     # Decrease inner gap
     bindsym $mod+Ctrl+minus gaps inner current minus 5
     # Reset gaps to default
-    bindsym $mod+Ctrl+0 gaps inner all set 10; gaps outer all set 10
+    bindsym $mod+Ctrl+0 gaps inner all set 15; gaps outer all set 15
     # Remove all gaps (maximize screen space)
     bindsym $mod+Ctrl+9 gaps inner all set 0; gaps outer all set 0
 #

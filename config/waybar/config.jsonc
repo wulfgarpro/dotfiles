@@ -1,7 +1,7 @@
 [
   {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "mod": "dock",
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
@@ -11,7 +11,7 @@
     "margin-top": 0,
     // "fixed-center": false,
     "modules-left": [
-      "custom/launcher",
+      // "custom/launcher",
       "sway/workspaces",
       "sway/scratchpad",
       "sway/mode"
@@ -20,23 +20,26 @@
       // "disk"
     ],
     "modules-center": [
-      // "sway/window"
+      // "sway/window",
       "clock"
     ],
     "modules-right": [
-      // "cpu",
-      // "memory",
-      // "disk",
+      "cpu",
+      "memory",
+      "disk",
+      // "clock",
       "network#home",
       "network#vpn",
       "pulseaudio#output",
       "pulseaudio#input",
       "backlight",
       "battery",
-      // "clock",
       "keyboard-state",
       "tray"
     ],
+    // "tray": {
+    //   "icon-size": 20,
+    // },
     "output": [
       "DP-3"
     ],

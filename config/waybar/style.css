@@ -1,19 +1,17 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: sans-serif;
   font-size: 11pt;
+  /* font-weight: 500; */
   font-weight: 500;
 }
 
 window#waybar {
-  background-color: #24283b;
-  color: #c0caf5; /* Keep the same font color */
-}
-
-#workspaces {
-  color: #c0caf5;
+  background: rgba(21, 18, 27, 0);
   /* background-color: #24283b; */
+  /* color: #24283b; */
+  color: #c0caf5; /* Keep the same font color */
 }
 
 #window {
@@ -22,26 +20,33 @@ window#waybar {
 }
 
 #scratchpad {
+  background: #24283b;
   color: #c0caf5;
   margin-left: 15px;
   /* background-color: #24283b; */
 }
 
 #mode {
+  background: #24283b;
   color: #c0caf5;
   margin-left: 15px;
   /* background-color: #24283b; */
 }
 
 #workspaces button {
-  padding: 5px 10px;
   color: #c0caf5;
+  /* margin-right: 5px; */
+  padding-right: 10px;
+  padding-left: 10px;
+  /* padding: 5px 10px; */
+  box-shadow: inset 0 0 0 2px #3d455a;
+  border-radius: 10px; /* keeps it rounded */
+  background: #24283b;
 }
 
 #workspaces button.focused {
   color: #c0caf5;
   background-color: #3b4261;
-  border-radius: 4px;
 }
 
 #workspaces button:hover {
@@ -49,33 +54,71 @@ window#waybar {
   text-shadow: none;
 }
 
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
 #cpu, #memory, #disk,
 #network,
 #pulseaudio,
 #battery,
 #backlight,
+#keyboard-state,
 #clock,
+#window,
+#scratchpad,
+#mode,
 #tray {
   /* background-color: #24283b; */
+  background: #24283b;
   color: #c0caf5;
-  padding: 0px 15px;
+  padding: 0px 10px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  margin-right: 2px;
+  margin-left: 2px;
+  box-shadow: inset 0 0 0 2px #3d455a;
+
+}
+
+#window {
+  margin-right: 10px;
+}
+
+#disk {
+  margin-right: 20px;
+}
+
+#tray {
+  padding: 0px 5px;
+}
+
+#workspaces {
+  /* padding-top: 2px; */
+  padding-bottom: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-left: 2px;
+  margin-right: 20px;
 }
 
 /* Hover Effect */
-#battery:hover,
-#network:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#backlight:hover,
-#pulseaudio:hover,
-#clock:hover,
-#custom-launcher:hover,
+/* #battery:hover, */
+/* #network:hover, */
+/* #cpu:hover, */
+/* #memory:hover, */
+/* #disk:hover, */
+/* #backlight:hover, */
+/* #pulseaudio:hover, */
+/* #clock:hover, */
+/* #custom-launcher:hover, */
 #workspaces button:hover {
     background: #3b4261; /* Tokonight hover background */
     color: #c0caf5; /* Keep the same font color */
-    border-radius: 0px;
+    border-radius: 10px;
     transition: background 0.2s ease-in-out;
+    /* box-shadow: inset 0 0 0 2px #a5b4fc; */
 }
 
 tooltip * {

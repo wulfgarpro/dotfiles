@@ -42,17 +42,47 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "{usage}% ",
-    "interval": 4
+    "interval": 2,
+    "format": "{icon} {usage:2}% · {avg_frequency} · {load}",
+    "format-alt": "{icon} {usage:2}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ], // Nerd Fonts; repeats just to enable ramp
+    "tooltip": true,
+    "tooltip-format": "CPU\nUsage: {usage}%\nLoad: {load}\nAvg Freq: {avg_frequency}",
+    "states": {
+      "warning": 65,
+      "critical": 85
+    }
+    // ,"on-click": "wezterm -e btop"
   },
   "memory": {
-    "format": "{used}GiB ",
-    "interval": 4
+    "interval": 5,
+    "format": " {percentage:2}% · {used}/{total}",
+    "format-alt": " SWAP {swapUsed}/{swapTotal}",
+    "tooltip": true,
+    "tooltip-format": "Memory\nUsed: {used} / {total} ({percentage}%)\nSwap: {swapUsed} / {swapTotal}",
+    "states": {
+      "warning": 70,
+      "critical": 85
+    }
+    // ,"on-click": "wezterm -e btop"
   },
   "disk": {
-    "format": "󰋊{percentage_used:2}% ",
+    "interval": 30,
     "path": "/",
-    "interval": 4
+    "format": " {free} free",
+    "format-alt": " {used}/{total} ({percentage_used}%)",
+    "tooltip": true,
+    "tooltip-format": "{path}\nUsed: {used}/{total}\nFree: {free}\nUsage: {percentage_used}%",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
   },
   "network#home": {
     "interface": "en*",

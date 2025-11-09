@@ -83,6 +83,10 @@ alias dln="sudo wget https://github.com/neovim/neovim/releases/download/nightly/
 alias mi="$HOME/code/personal/Vault/Scripts/machine_init.sh "
 
 alias aur="cd $HOME/code/external/AUR/"
-alias aosp="cd $HOME/code/external/AOSP/"
+alias aosp="cd $HOME/code/external/aosp/"
+
+alias h2h="cd $HOME/code/personal/Linux_ED/how2heap"
 
 source ~/.zsh_aliases_private 2>/dev/null
+
+

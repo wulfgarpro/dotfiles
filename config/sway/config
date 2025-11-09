@@ -35,7 +35,8 @@ set $files thunar
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg $wallpaper fill
+#output * bg $wallpaper fill
+output * bg #24283b solid_color
 output HDMI-A-3 {
     transform 90
     pos -1080 0
@@ -240,7 +241,7 @@ bindsym $mod+r mode "resize"
     # Decrease inner gap
     bindsym $mod+Ctrl+minus gaps inner current minus 5
     # Reset gaps to default
-    bindsym $mod+Ctrl+0 gaps inner all set 15; gaps outer all set 15
+    bindsym $mod+Ctrl+0 gaps inner all set 10; gaps outer all set 0
     # Remove all gaps (maximize screen space)
     bindsym $mod+Ctrl+9 gaps inner all set 0; gaps outer all set 0
 #

@@ -77,8 +77,6 @@ alias pub="public"
 alias ctf="cd $HOME/code/personal/CTF"
 
 ## Other
-alias sls="sudo systemctl start openvpn-client@sls.service"
-alias ssls="sudo systemctl stop openvpn-client@sls.service"
 alias dln="sudo wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -O /opt/nvim.appimage && chmod +x /opt/nvim.appimage"
 alias mi="$HOME/code/personal/Vault/Scripts/machine_init.sh "
 
@@ -87,6 +85,8 @@ alias aosp="cd $HOME/code/external/aosp/"
 
 alias h2h="cd $HOME/code/personal/Linux_ED/how2heap"
 
+alias vpn="openvpn3 session-start --config sls3"
+alias vpnd="openvpn3 session-manage --disconnect --config sls3"
+alias vpns="openvpn3 sessions-list"
+
 source ~/.zsh_aliases_private 2>/dev/null
-
-

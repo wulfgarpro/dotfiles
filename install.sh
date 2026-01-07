@@ -66,6 +66,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     lsd \
     mako \
     meld \
+    mermaid-cli \
     neovim \
     net-tools \
     network-manager-applet \
@@ -87,12 +88,14 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     swaybg \
     swayidle \
     swaylock \
+    tectonic \
     thunar \
     thunar-archive-plugin \
     thunar-volman \
     tmux \
     trash-cli \
     tree \
+    tree-sitter-cli \
     ttf-font-awesome \
     ttf-jetbrains-mono \
     ttf-jetbrains-mono-nerd \

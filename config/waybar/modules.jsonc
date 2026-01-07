@@ -43,7 +43,7 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "{icon} {usage:2}% · {avg_frequency} · {load}",
+    "format": "{icon} {usage:2}%",
     "format-alt": "{icon} {usage:2}%",
     "format-icons": [
       "",

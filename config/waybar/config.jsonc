@@ -13,20 +13,17 @@
     "modules-left": [
       // "custom/launcher",
       "sway/workspaces",
+      "cpu",
+      "memory",
+      "disk",
       "sway/scratchpad",
       "sway/mode"
-      // "cpu",
-      // "memory",
-      // "disk"
     ],
     "modules-center": [
       // "sway/window",
       "clock"
     ],
     "modules-right": [
-      "cpu",
-      "memory",
-      "disk",
       // "clock",
       "network#home",
       "network#vpn",
@@ -37,9 +34,6 @@
       "keyboard-state",
       "tray"
     ],
-    // "tray": {
-    //   "icon-size": 20,
-    // },
     "output": [
       "DP-3"
     ],

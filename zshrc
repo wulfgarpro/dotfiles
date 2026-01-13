@@ -52,6 +52,9 @@ if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
 fi
 ## DEBUGINFOD_URLS for GDB/pwndbg
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+## GHIDRA_INSTALL_DIR for PyGhidra
+export GHIDRA_INSTALL_DIR=/opt/ghidra/
+
 ## PATH
 export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 

@@ -184,7 +184,7 @@ exec swayidle -w \
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    #bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -259,6 +259,9 @@ bindsym $mod+r mode "resize"
     bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
     # Special key to take a screenshot with grim and annotate with swappy
     bindsym $mod+Ctrl+s exec grim -g "$(slurp -d)" - | swappy -f - -o - | wl-copy
+
+    # Others
+    bindsym $mod+e exec thunar
 
 #
 # Status Bar:

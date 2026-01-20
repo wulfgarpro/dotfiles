@@ -57,8 +57,9 @@ for items in sinks:
     else:
         output += f"{items['sink_name']}\n"
 
+
 # Call wofi and show the list. take the selected sink name and set it as the default sink
-wofi_command = f"echo '{output}' | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search=true --location=bottom_right --width=600 --height=200 --xoffset=-60"
+wofi_command = f"echo '{output}' | wofi --show=dmenu --allow-markup --define=hide_search=true --location=bottom_right --width=600 --height=200"  # --xoffset=-60"
 wofi_process = subprocess.run(
     wofi_command,
     shell=True,

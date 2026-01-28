@@ -178,6 +178,8 @@ systemctl --user daemon-reload
 # systemctl --user enable --now set-bing-wallpaper.timer
 systemctl --user enable --now inhibit-suspend-on-ssh.service
 
+# Build bat cache so themes work
+bat cache --build
 # Rebuild font cache
 fc-cache -fv
 

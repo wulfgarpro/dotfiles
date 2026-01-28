@@ -41,6 +41,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
 
   sudo pacman -Sq --noconfirm --needed \
     autotiling \
+    aerc \
     base-devel \
     bat \
     bluez \
@@ -53,6 +54,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     fd \
     file-roller \
     firefox \
+    fzf \
     git \
     git-delta \
     git-lfs \
@@ -103,10 +105,12 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     ttf-nerd-fonts-symbols-mono \
     tumbler \
     unzip \
+    uv \
     vim \
     waybar \
     webp-pixbuf-loader \
     wezterm \
+    wl-clipboard \
     wget \
     wofi \
     xorg-xwayland \
@@ -122,8 +126,8 @@ if [[ "$SKIP_INSTALL" == false ]]; then
 
   # If `paru` is _not_ installed, install from AUR:
   # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
-  paru -Sq --noconfirm --needed \
-    google-chrome
+  #paru -Sq --noconfirm --needed \
+  #  google-chrome
   paru -Sqcc --noconfirm
 fi
 

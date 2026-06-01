@@ -25,3 +25,16 @@ vim.api.nvim_create_autocmd("FileType", {
     set colorcolumn+=100
   ]],
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+    vim.opt_local.textwidth = 100
+    vim.opt_local.showbreak = "↪ "
+    vim.keymap.set("n", "j", "gj", { buffer = true })
+    vim.keymap.set("n", "k", "gk", { buffer = true })
+  end,
+})

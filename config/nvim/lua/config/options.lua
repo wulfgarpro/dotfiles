@@ -10,3 +10,20 @@ vim.g.neovide_cursor_trail_size = 0
 vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.opt.colorcolumn = "80"
+vim.opt.clipboard = "unnamedplus"
+
+-- Use OSC 52 for clipboard when SSH'd (no X11 display available)
+-- Falls back to xclip locally where it already works
+if vim.env.SSH_CONNECTION then
+  vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+      ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    },
+  }
+end

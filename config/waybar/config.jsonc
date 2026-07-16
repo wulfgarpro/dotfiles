@@ -35,7 +35,7 @@
       "tray"
     ],
     "output": [
-      "DP-3"
+      "DP-2"
     ],
     "include": [
       "~/.config/waybar/modules.jsonc"

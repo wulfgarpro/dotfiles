@@ -37,7 +37,7 @@ set $files thunar
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg $wallpaper fill
 output * bg #24283b solid_color
-output HDMI-A-3 {
+output HDMI-A-2 {
     transform 90
     pos -1080 0
     scale 1

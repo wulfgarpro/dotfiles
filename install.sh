@@ -58,8 +58,10 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     git \
     git-delta \
     git-lfs \
+    glow \
     grim \
     hexyl \
+    htop \
     hunspell \
     hunspell-en_au \
     lazygit \
@@ -67,6 +69,8 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     luarocks \
     lsd \
     mako \
+    man-db \
+    man-pages \
     meld \
     mermaid-cli \
     neovim \
@@ -81,6 +85,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     npm \
     oculante \
     polkit \
+    python-ipython \
     python3 \
     pyenv \
     ripgrep \
@@ -126,9 +131,11 @@ if [[ "$SKIP_INSTALL" == false ]]; then
 
   # If `paru` is _not_ installed, install from AUR:
   # `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`
+  # NOTE: `openvpn3` backs the `vpn`/`vpnd`/`vpns` aliases in zsh_aliases.
   #paru -Sq --noconfirm --needed \
-  #  google-chrome
-  paru -Sqcc --noconfirm
+  #  google-chrome \
+  #  openvpn3
+  #paru -Sqcc --noconfirm
 fi
 
 echo "############################################"
@@ -184,12 +191,12 @@ bat cache --build
 fc-cache -fv
 
 # Firefox
-APP_DIR="${HOME}/.local/share/applications"
-LOCAL_BIN="${HOME}"/.local/bin
-rm "${APP_DIR}/firefox.desktop" 2>/dev/null
-rm "${LOCAL_BIN}/firefox" 2>/dev/null
-ln -sfT "${SCRIPT_DIR}/.config/sway/scripts/resources/firefox.desktop" "${APP_DIR}/firefox.desktop"
-ln -sfT "${SCRIPT_DIR}/.config/sway/scripts/firefox" "${LOCAL_BIN}/firefox"
+#APP_DIR="${HOME}/.local/share/applications"
+#LOCAL_BIN="${HOME}"/.local/bin
+#rm "${APP_DIR}/firefox.desktop" 2>/dev/null
+#rm "${LOCAL_BIN}/firefox" 2>/dev/null
+#ln -sfT "${SCRIPT_DIR}/config/sway/scripts/resources/firefox.desktop" "${APP_DIR}/firefox.desktop"
+#ln -sfT "${SCRIPT_DIR}/config/sway/scripts/firefox" "${LOCAL_BIN}/firefox"
 
 # Relaunch `zsh`.
 exec zsh

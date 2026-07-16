@@ -1,4 +1,4 @@
-config/systemd/user/timers.target.wants
-config/systemd/user/default.target.wants
+config/systemd/user/*.wants/
+config/systemd/user/pipewire-session-manager.service
 config/nvim/lazyvim.json
 config/nvim/lazy-lock.json

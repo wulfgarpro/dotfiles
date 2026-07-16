@@ -22,7 +22,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	navtigate = true
+	navigate = true
   line-numbers = true
 [include]
   path = ~/.config/delta/tokyonight_storm.gitconfig

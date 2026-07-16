@@ -34,12 +34,18 @@ source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plug
 source "${HOME}/.zsh_aliases"
 
 #-Variables
-ANDROID_HOME=${HOME}/Android/Sdk
+export ANDROID_HOME=${HOME}/Android/Sdk
 HOME_BIN=${HOME}/bin
 LOCAL_BIN=${HOME}/.local/bin
 CARGO_BIN=${HOME}/.cargo/bin
 GO_BIN=${HOME}/go/bin
-NDK_HOME=${ANDROID_HOME}/ndk/29.0.13113456
+# Resolve the latest installed NDK instead of pinning a version 
+# (N: no error if absent, /: dirs only, On: sort by name descending so [1] is newest).
+typeset -a _ndk_dirs=(${ANDROID_HOME}/ndk/*(N/On))
+export NDK_HOME=${_ndk_dirs[1]}
+unset _ndk_dirs
+# Add NDK bins to path
+[[ -n $NDK_HOME ]] && PATH="$PATH:$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin"
 
 #-Exports
 export EDITOR=nvim
@@ -49,6 +55,7 @@ export LIBVIRT_DEFAULT_URI="qemu:///system"
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
     ## Don't reparent Java AWT/Swing apps
     export _JAVA_AWT_WM_NONREPARENTING=1
+    #export WLR_NO_HARDWARE_CURSORS=1
 fi
 ## DEBUGINFOD_URLS for GDB/pwndbg
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
@@ -56,7 +63,7 @@ export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export GHIDRA_INSTALL_DIR=/opt/ghidra/
 
 ## PATH
-export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
+export PATH=$HOME_BIN:$LOCAL_BIN:$CARGO_BIN:$GO_BIN:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$PATH
 
 # Enable shell autocompletion for `uv` and `uvx` commands.
 eval "$(uv generate-shell-completion zsh)"

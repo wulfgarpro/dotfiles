@@ -32,6 +32,7 @@ pmc() {
   orphans=$(pacman -Qtdq) || { echo "No orphan packages to remove."; return 0; }
   sudo pacman -Rsnc $orphans
 }
+alias pmu="sudo pacman -Syu"
 alias ipy="ipython"
 ### Tmux
 alias tmn="tmux new -s "

@@ -49,6 +49,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     brightnessctl \
     curl \
     difftastic \
+    dnsutils \
     eza \
     fastfetch \
     fd \
@@ -88,6 +89,7 @@ if [[ "$SKIP_INSTALL" == false ]]; then
     python-ipython \
     python3 \
     pyenv \
+    reflector \
     ripgrep \
     slurp \
     swappy \

@@ -72,12 +72,12 @@ config.command_palette_fg_color = "#c0caf5"
 config.scrollback_lines = 10000
 
 -- https://github.com/wezterm/wezterm/discussions/5322
-config.enable_wayland = true -- native Wayland on Sway; no-op under X11/i3
+config.enable_wayland = false
 
 if wezterm.hostname() == "vat" then
 	config.front_end = "Software" -- VM with a virtualized GPU
 else
-	config.front_end = "WebGpu" -- real GPU on the desktop
+	config.front_end = "Software" -- real GPU on the desktop
 end
 
 if wezterm.target_triple:find("windows") then

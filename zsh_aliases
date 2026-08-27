@@ -70,4 +70,6 @@ alias vpn="openvpn3 session-start --config sls3"
 alias vpnd="openvpn3 session-manage --disconnect --config sls3"
 alias vpns="openvpn3 sessions-list"
 
+alias frida="uv run frida"
+
 [[ -f ~/.zsh_aliases_private ]] && source ~/.zsh_aliases_private

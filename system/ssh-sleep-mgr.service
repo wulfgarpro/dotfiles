@@ -1,0 +1,12 @@
+[Unit]
+Description=Inhibit suspend during SSH sessions, auto-suspend when idle
+After=network.target sshd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ssh-sleep-mgr
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

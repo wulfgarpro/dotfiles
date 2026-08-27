@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# ssh-sleep-mgr — inhibit suspend while SSH sessions are active,
+# auto-suspend after a grace period when no interactive sessions remain.
+#
+# Three states:
+#   SSH connected     → hold inhibit lock, no auto-suspend
+#   Other sessions    → no lock, no auto-suspend (let swayidle etc handle it)
+#   No sessions       → no lock, auto-suspend after grace period
+#
+# Designed to run as a system service (multi-user.target), no
+# desktop session required.
+
+AUTO_SUSPEND=true
+GRACE=300       # seconds after last session drops before suspending
+POLL=30
+
+exec 1> >(logger -s -t "${0##*/}") 2>&1
+
+lock_pid=""
+idle_since=""
+
+cleanup() {
+    [[ -n "$lock_pid" ]] && kill "$lock_pid" 2>/dev/null
+    exit 0
+}
+trap cleanup EXIT TERM INT
+
+has_ssh_sessions() {
+    ss -Htn sport = :22 | grep -q .
+}
+
+has_any_session() {
+    loginctl list-sessions --no-legend 2>/dev/null | grep -q .
+}
+
+take_lock() {
+    [[ -n "$lock_pid" ]] && kill -0 "$lock_pid" 2>/dev/null && return
+    systemd-inhibit --what=sleep --who=ssh-sleep-mgr \
+        --why="Active SSH session" --mode=block sleep infinity &
+    lock_pid=$!
+    echo "Lock acquired (PID $lock_pid)"
+}
+
+drop_lock() {
+    if [[ -n "$lock_pid" ]]; then
+        kill "$lock_pid" 2>/dev/null
+        wait "$lock_pid" 2>/dev/null
+        lock_pid=""
+        echo "Lock released"
+    fi
+}
+
+echo "Starting (grace=${GRACE}s, poll=${POLL}s, auto_suspend=${AUTO_SUSPEND})"
+
+while true; do
+    if has_ssh_sessions; then
+        take_lock
+        idle_since=""
+    elif has_any_session; then
+        # Other sessions active (Sway, TTY) — let their own idle
+        # management handle suspend
+        drop_lock
+        idle_since=""
+    else
+        # No sessions at all — we own suspend
+        drop_lock
+        if $AUTO_SUSPEND; then
+            : "${idle_since:=$(date +%s)}"
+            elapsed=$(( $(date +%s) - idle_since ))
+            if (( elapsed >= GRACE )); then
+                echo "Grace period expired (${GRACE}s). No sessions. Suspending."
+                systemctl suspend
+                idle_since=""   # reset after wake
+            fi
+        fi
+    fi
+    sleep "$POLL"
+done

@@ -184,8 +184,17 @@ done
 
 # Reload and enable the systemd services for user
 systemctl --user daemon-reload
-# systemctl --user enable --now set-bing-wallpaper.timer
-systemctl --user enable --now inhibit-suspend-on-ssh.service
+#systemctl --user enable --now set-bing-wallpaper.timer
+
+# System-level services (require sudo)
+echo "############################################"
+echo "++ Installing system services ++"
+echo "############################################"
+
+sudo install -m 755 "${SCRIPT_DIR}/system/ssh-sleep-mgr" /usr/local/bin/ssh-sleep-mgr
+sudo cp "${SCRIPT_DIR}/system/ssh-sleep-mgr.service" /etc/systemd/system/ssh-sleep-mgr.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now ssh-sleep-mgr.service
 
 # Build bat cache so themes work
 bat cache --build

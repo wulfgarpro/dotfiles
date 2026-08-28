@@ -196,6 +196,9 @@ sudo cp "${SCRIPT_DIR}/system/ssh-sleep-mgr.service" /etc/systemd/system/ssh-sle
 sudo systemctl daemon-reload
 sudo systemctl enable --now ssh-sleep-mgr.service
 
+sudo install -m 644 "${SCRIPT_DIR}/system/reflector.conf" /etc/xdg/reflector/reflector.conf
+sudo systemctl enable --now reflector.timer
+
 # Build bat cache so themes work
 bat cache --build
 # Rebuild font cache

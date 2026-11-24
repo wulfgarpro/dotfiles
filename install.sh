@@ -164,6 +164,7 @@ declare -a resources=(
   "config/zsh"
   "gdbinit"
   "gitconfig"
+  "markdownlint-cli2.yaml"
   "p10k.zsh"
   "zshrc"
   "zsh_aliases"

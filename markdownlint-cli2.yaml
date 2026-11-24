@@ -1,0 +1,47 @@
+# markdownlint-cli2 configuration.
+#
+# install.sh symlinks this to ~/.markdownlint-cli2.yaml, and Neovim's nvim-lint
+# setup (config/nvim/lua/plugins/nvim-lint.lua) points markdownlint-cli2 here so
+# the same rules apply on every machine.
+#
+# Rule reference: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+config:
+  # Start from the full default rule set, then relax the noisy ones below.
+  default: true
+
+  # MD013 - Line length: match the editor's 100-column prose width. Don't flag
+  # long lines inside code blocks, tables, or headings, where wrapping hurts.
+  line-length:
+    line_length: 100
+    code_blocks: false
+    tables: false
+    headings: false
+
+  # MD033 - Allow the handful of inline-HTML tags that are genuinely useful.
+  no-inline-html:
+    allowed_elements:
+      - br
+      - details
+      - summary
+      - kbd
+      - sub
+      - sup
+
+  # MD024 - Duplicate headings are fine under different parents (e.g. repeated
+  # "Example" sections).
+  no-duplicate-heading:
+    siblings_only: true
+
+  # MD004 / MD007 - Consistent unordered-list bullet and indent.
+  ul-style:
+    style: dash
+  ul-indent:
+    indent: 2
+
+  # MD029 - Ordered lists increment (1. 2. 3.) rather than repeating 1.
+  ol-prefix:
+    style: ordered
+
+  # MD034 - Bare URLs are common in notes and READMEs; don't flag them.
+  no-bare-urls: false
